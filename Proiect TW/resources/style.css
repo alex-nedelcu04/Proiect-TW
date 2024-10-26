@@ -1,0 +1,130 @@
+
+/*
+main {
+
+    background-image: url("Pictures/star-wars-background.jpeg");
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+    
+}
+*/
+ body {
+    padding-left: 6%;
+    padding-right: 6%;
+ }
+.LogoMenu {
+    text-align: center;
+    padding: 2%;
+
+}
+
+#StarWarsLogo {
+    width: 10%;
+    padding-bottom: 2%;
+}
+/*
+.Release {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+
+}
+*/
+ #ReleaseOrderPic {
+    width: 20%;
+ }
+/*
+.Chrono {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+}
+
+*/
+#ChronoOrderPic {
+    width: 40%;
+ }
+/*
+#Introduction {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+
+}
+
+#Motivation {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+
+}
+
+#IntroRVC {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+}
+*/
+
+.navigation {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navigation a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropdown {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navigation a:hover, .dropdown .dropdown {
+    background-color: #002bec;
+  }
+  
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #002bec;
+    z-index: 1;
+}
+  
+.dropdownContent a {
+    float: none;
+    color:white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+  
+.dropdownContent a:hover {
+    background-color: #ffee00;
+    color:#000000
+}
+  
+.dropdown:hover .dropdownContent {
+    display: block;
+}
