@@ -1,130 +1,164 @@
-
-/*
-main {
-
-    background-image: url("Pictures/star-wars-background.jpeg");
+body {
+    background-image: url(Pictures/star-wars-background.jpeg);
     color: white;
+}
+main {
+    padding: 2%;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.5fr 3.5fr;
+    grid-template-rows: 0.2fr 1.8fr 0.2fr;
+    grid-template-areas: 
+         "nav nav"
+         "sidebar main"
+         "sidebar footer";
+    grid-gap: 0.4rem;
+}
+
+nav {
+    border-radius: 25px;
+    background-color: #424242;
+    grid-area: nav;
+}
+
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul{
+    float: left;
+    list-style: none;
+    margin-right: 5px;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    background: #1a1919;
+    margin: 0 5px;
+    position: relative;
+    width: 150px;
+    height: 75px;
+}
+
+nav ul li a {
     display: flex;
     align-items: center;
-    flex-direction: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0, 20px;
+    color: white;
+    text-decoration: none;
+    line-height: 75px;
+    font-size: 15px;
+
+}
+
+nav ul li a:hover {
+    color: #ffe81f;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ffe81f,
+                0 0 5px #e0cb0d;
+}
+
+nav ul ul li a:hover {
+    color: #ffe81f;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 60px;
+    border-top: 3px solid #ffe81f;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul ul ul {
+    border-top: none;
+    left: 73%;
+    top:0;
+    opacity: 0;
+    visibility: hidden;
     
 }
-*/
- body {
-    padding-left: 6%;
-    padding-right: 6%;
- }
-.LogoMenu {
-    text-align: center;
-    padding: 2%;
-
+nav ul li:hover > ul{
+    top: 75px;
+    opacity: 1;
+    visibility: visible;
 }
 
-#StarWarsLogo {
-    width: 10%;
-    padding-bottom: 2%;
-}
-/*
-.Release {
-    display: grid;
-    grid-template-columns: auto;
-    justify-items: center;
-
-}
-*/
- #ReleaseOrderPic {
-    width: 20%;
- }
-/*
-.Chrono {
-    display: grid;
-    grid-template-columns: auto;
-    justify-items: center;
+nav ul ul li {
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid #1a1919;
 }
 
-*/
-#ChronoOrderPic {
-    width: 40%;
- }
-/*
-#Introduction {
-    display: grid;
-    grid-template-columns: auto;
-    justify-items: center;
-
-}
-
-#Motivation {
-    display: grid;
-    grid-template-columns: auto;
-    justify-items: center;
-
-}
-
-#IntroRVC {
-    display: grid;
-    grid-template-columns: auto;
-    justify-items: center;
-}
-*/
-
-.navigation {
+nav ul ul li a{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding: 0, 20px;
     overflow: hidden;
-    background-color: #333;
+    white-space: nowrap;
+    box-sizing: border-box;
+    line-height: 50px;
 }
 
-.navigation a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+nav ul ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
 }
 
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropdown {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
+nav ul ul ul li {
+    top: -60px;
+    width: 100%;
     margin: 0;
 }
 
-.navigation a:hover, .dropdown .dropdown {
-    background-color: #002bec;
-  }
-  
-.dropdownContent {
-    display: none;
-    position: absolute;
-    background-color: #000000;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px #002bec;
-    z-index: 1;
+main {
+    border-radius: 25px;
+    background-color: #424242;
+    grid-area: main;
 }
-  
-.dropdownContent a {
-    float: none;
-    color:white;
-    padding: 12px 16px;
-    text-decoration: none;
+
+#sidebar {
+    border-radius: 25px;
+    background-color: #424242;
+    grid-area: sidebar;
+}
+
+footer {
+    border-radius: 25px;
+    background-color: #424242;
+    grid-area: footer;
+}
+
+#sw-logo {
     display: block;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    padding: 1%;
+    
 }
-  
-.dropdownContent a:hover {
-    background-color: #ffee00;
-    color:#000000
+
+#ReleaseOrderPic {
+    width: 20%;
 }
-  
-.dropdown:hover .dropdownContent {
-    display: block;
+
+#ChronoOrderPic {
+    width: 40%;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.5em;
 }
