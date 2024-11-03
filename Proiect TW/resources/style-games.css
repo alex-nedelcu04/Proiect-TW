@@ -1,6 +1,6 @@
 
 body {
-    background-image: url(Pictures/star-wars-background.jpeg);
+    background-image: url(pictures/star-wars-background.jpeg);
     color: white;
     
     padding: 1%;
@@ -9,14 +9,15 @@ body {
 .grid-container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 3.5fr 0.5fr;
-    grid-template-rows: auto 1.8fr auto;
+    grid-template-columns: auto;
+    grid-template-rows: 0.2fr 1.8fr 0.2fr;
     grid-template-areas: 
-         "nav nav "
-         "main sidebar"
-         "footer footer";
+         "nav "
+         "main"
+         "footer";
     grid-gap: 1rem;
 }
+
 
 main {
     border-radius: 25px;
@@ -62,7 +63,7 @@ h1, h2, h3 {
 }
 
 .wrap-img img {
-        width: 10%;
+        width: 15%;
         float: left;
         margin-right: 2%;
 }
@@ -162,7 +163,7 @@ html {
 }
 
 .back-to-top:hover {
-    background: url(Pictures/hyperspace.png)
+    background: url(pictures/hyperspace.png)
 }
 
 .back-to-top:hover img {
@@ -174,12 +175,27 @@ p > a {
     font-style:italic;
 }
 
+
 .actor-name {
-    color: #ffe81f;
+    color: #2E67F8;
     font-weight: bold;
+    text-shadow:  2px 2px #000000;
 }
 
+.actor-name:hover {
+    color: #ffe81f;
+    font-weight: bold
+}
 .sidebar ul li {
     margin-bottom: 5%;
     font-size: 1.25em;
+}
+
+
+#section-divide {
+    border: 0.5em solid #262626;
+}
+
+#title-divide {
+    border: 0.25em dashed #262626;
 }

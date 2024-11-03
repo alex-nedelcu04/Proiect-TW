@@ -10,14 +10,15 @@
         <meta name="keywords" content="Movie Guide, Star Wars, Skywalker, Darth Vader, 
         Yoda, Force, Dark Side, Mandalorian, Clone Wars, Obi wan Kenobi, Death Star">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="resources/style-others.css" type="text/css">
+        <link rel="stylesheet" href="resources/style-movies.css" type="text/css">
         <link rel="icon" href="resources/r2d2.ico" type="image/x-icon">
     </head>
     <body>
         <header>
-            <img src="resources/Pictures/star-wars-logo.png" alt="Star Wars Logo" id="sw-logo">
+            <img src="resources/pictures/star-wars-logo.png" alt="Star Wars Logo" id="sw-logo">
         </header>
         <div class="grid-container">
+            <!--meniu navigare-->
             <nav class="dropdown-menu">
                 <ul class = "menu">
                     <li><a href="main.html#Introduction">Introduction</a> </li>
@@ -29,68 +30,80 @@
                                 <ul>
                                     <li><a href="movies.html#episode1">Episode I: The Phantom Menace</a> </li>
                                     <li><a href="movies.html#episode2">Episode II: Attack of the Clones</a> </li>
-                                    <li><a href="movies.html#episode3">Episode III :Revenge of the Sith</a> </li>
+                                    <li><a href="movies.html#episode3">Episode III:  Revenge of the Sith</a> </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">The Original Trilogy</a>
+                                <a href="movies.html#original-trilogy">The Original Trilogy</a>
                                 <ul>
-                                    <li><a href="#">Episode IV: A New Hope</a> </li>
-                                    <li><a href="#">Episode V: Empire Strikes Back</a> </li>
-                                    <li><a href="#"> Episode VI: Return of the Jedi </a> </li>
+                                    <li><a href="movies.html#episode4">Episode IV: A New Hope</a> </li>
+                                    <li><a href="movies.html#episode5">Episode V: The Empire Strikes Back</a> </li>
+                                    <li><a href="movies.html#episode6"> Episode VI: Return of the Jedi </a> </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">The Sequel Trilogy</a>
+                                <a href="movies.html#sequel-trilogy">The Sequel Trilogy</a>
                                 <ul>
-                                    <li><a href="#">Episode VII: The Force Awakens</a> </li>
-                                    <li><a href="#">Episode VIII: The Last Jedi</a> </li>
-                                    <li><a href="#"> Episode IX: The Rise of Skywalker </a> </li>
+                                    <li><a href="movies.html#episode7">Episode VII: The Force Awakens</a> </li>
+                                    <li><a href="movies.html#episode8">Episode VIII: The Last Jedi</a> </li>
+                                    <li><a href="movies.html#episode9"> Episode IX: The Rise of Skywalker </a> </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">Anthology Movies</a>
+                                <a href="movies.html#anthology-movies">Anthology Movies</a>
                                 <ul>
-                                    <li><a href="#">Rogue One: A Star Wars Story</a> </li>
-                                    <li><a href="#">Solo: A Star Wars Story</a> </li>
+                                    <li><a href="movies.html#rogue-one">Rogue One: A Star Wars Story</a> </li>
+                                    <li><a href="movies.html#solo">Solo: A Star Wars Story</a> </li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
 
                    <li> 
-                        <a hred="#"> Disney+ Series </a> 
+                        <a href="series.html"> Disney+ Series </a> 
                         <ul>
-                            <li><a href="#">The Clone Wars</a> </li>
-                            <li><a href="#"> Rebels </a> </li>
-                            <li><a href="#">The Mandalorian </a> </li>
-                            <li><a href="#">The Book of Boba Fett </a> </li>
-                            <li><a href="#">Andor</a> </li>
-                            <li><a href="#">Ahsoka</a> </li>
+                            <li><a href="series.html#clone-wars">The Clone Wars</a> </li>
+                            <li><a href="series.html#rebels"> Rebels </a> </li>
+                            <li><a href="series.html#the-mandalorian">The Mandalorian </a> </li>
+                            <li><a href="series.html#book-of-boba-fett">The Book of Boba Fett </a> </li>
+                            <li><a href="series.html#kenobi">Obi-Wan Kenobi </a> </li>
+                            <li><a href="series.html#andor">Andor</a> </li>
+                            <li><a href="series.html#ahsoka">Ahsoka</a> </li>
 
                         </ul>
                     </li> 
-                    <li> 
-                        <a hred="#"> Games </a> 
+                    <li>  
+                        <a href="games.html"> Games </a> 
                         <ul>
-                            <li><a href="#">Jedi: Fallen Order</a> </li>
-                            <li><a href="#"> Jedi: Surivor </a> </li>
-                            <li><a href="#">Battlefront I & II </a> </li>
-                            <li><a href="#">Star Wars Outlaws</a> </li>
+                            <li><a href="games.html#fallen-order">Jedi: Fallen Order</a> </li>
+                            <li><a href="games.html#survivor"> Jedi: Surivor </a> </li>
+                            <li><a href="games.html#battlefront">Battlefront I & II </a> </li>
+                            <li><a href="games.html#outlaws">Star Wars Outlaws</a> </li>
                         </ul>
                     </li> 
                 </ul>    
             </nav>
             <main>
-                <section class="prequel-trilogy"> 
+                <!--prequel-trilogy-->
+                <section id="prequel-trilogy"> 
                     <h1>The Prequel Trilogy</h1>
+                    <section id = "intro">
+                        <p> The Prequel Trilogy comes as a necessary addition to the Star Wars universe, addressing many intriguing questions left by the 
+                            Original Trilogy. It marked the long-awaited return of Star Wars to the big screen and became the catalyst for one of the most 
+                            well-built and explored eras in future releases in the entire Star Wars timeline: the Republic Era, followed by the Clone Wars 
+                            and the transition into the Empire.
+                        </p>
+                    </section>
+
+                    <hr id="movie-divide">
+
                     <section id="episode1">
-                        <h2> Star Wars: Episode I - The Phantom Menace </h2>
+                        <h2> Star Wars: Episode I - The Phantom Menace (1999) </h2>
                         <div class ="wrap-img">
-                            <img src="resources/Pictures/movies/episode1.jpg" alt="Episode I poster", id = "episode1-poster">
+                            <img src="resources/pictures/movies/episode1.jpg" alt="Episode I poster", id = "episode1-poster">
                             <section class="description">
                                 <h3>Description</h3>
-                                <p> Star Wars: Episode I – The Phantom Menace is the first movie in The Prequel Trilogy, 
+                                <p> Star Wars: Episode I - The Phantom Menace is the first movie in The Prequel Trilogy, 
                                     serving as the beginning of the story chronologically. The action takes place during 
                                     the era of the Republic (32 BBY) and follows Jedi Knights Qui-Gon Jinn and Obi-Wan Kenobi 
                                     as they attempt to resolve a diplomatic crisis that, if left unchecked, could escalate into 
@@ -115,76 +128,652 @@
                                 </p>
                             </section>
                         </div>
+                        <section id="trailer">
+                            <h3>Star Wars: Episode I - The Phantom Menace (1999) Trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/bD7bpG-zDJQ?si=a92sb99r9foxbpDf" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </section>
+                    </section>
+
+                    <hr id="movie-divide">
+
+                    <section id="episode2">
+                        <h2> Star Wars: Episode II - Attack of the Clones (2002) </h2>
+                        <div class ="wrap-img">
+                            <img src="resources/pictures/movies/episode2.jpg" alt="Episode II poster", id = "episode2-poster">
+                            <section class="description">
+                                <h3>Description</h3>
+                                <p> Star Wars: Episode II - Attack of the Clones is the second movie in The Prequel Trilogy, set ten years after the events of 
+                                    <a href="#episode1">Episode I</a>. It shows how the relationship between the Republic and the Separatist forces, led by Count Dooku (a former Jedi
+                                    who has turned to the dark side), has reached a breaking point.
+                                </p>
+                                <p>                               
+                                    Jedi Knight Obi-Wan Kenobi, now the master of 19-year-old Anakin Skywalker, is sent on a mission to discover the culprit behind 
+                                    a failed assassination attempt on Senator Padmé Amidala. While tasked with protecting her, Anakin falls in love with the senator 
+                                    and former queen of Naboo. Meanwhile, Kenobi learns of an army of clones created at the request of a late Jedi, Sifo-Dyas, in 
+                                    anticipation of a great war.
+
+                                </p>
+                                <p> Anakin, Padmé, and Obi-Wan are kidnapped by Geonosians, allies of the Separatists, and their rescue marks the beginning of the Clone Wars 
+                                    as Chancellor Palpatine orders the deployment of the newly found clone army on Geonosis.
+                                </p>
+                
+                            </section>
+                            <section class="reception">
+                                <h3>Reception</h3>
+                                <p>The movie received a mixed reception from fans and critics upon its release. While many praised its efforts in terms of world-building and marking the 
+                                    beginning of the Clone Wars, others were left unimpressed by the often "cheesy" dialogue, the romantic subplot, and the overall rushed feel of the action.
+                                </p>
+                                <p>Recently, however, people have begun to appreciate the movie for its role in setting up the more successful <a href="#episode3">Episode III - Revenge of the Sith</a> and the very popular animated series 
+                                    <a href="series.html#clone-wars">The Clone Wars</a>.
+                                </p>
+                            </section>
+                        </div>
+                        <section id="trailer">
+                            <h3>Star Wars: Episode II - Attack of the Clones (2002) Trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gYbW1F_c9eM?si=prgIX35ozByKurGQ" title="YouTube video player" frameborder="0" allow="accelerometer; 
+                            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </section>
+                    </section>
+                    <hr id="movie-divide">
+                    <section id="episode3">
+                        <h2> Star Wars: Episode III - Revenge of the Sith (2005)</h2>
+                        <div class ="wrap-img">
+                            <img src="resources/pictures/movies/episode3.jpg" alt="Episode III poster", id = "episode3-poster">
+                            <section class="description">
+                                <h3>Description</h3>
+                                <p> Star Wars: Episode III - Revenge of the Sith is the final movie in the Prequel Trilogy, set three years after the events of Episode II. 
+                                    It showcases the last few months of the Clone Wars and Anakin Skywalker's tragic turn to the Dark Side.
+                                <p> Chancellor Palpatine pushes Anakin closer to darkness by feeding into his mistrust of the Jedi Council's methods and by convincing him that the Dark Side is the only way to save the life of his now-pregnant wife, Padmé.
+                                     When Palpatine reveals himself as a Sith Lord, Anakin notifies the Jedi Council, but, to his disbelief, he still hasn't earned their trust. When he learns of Mace Windu's plan to kill Palpatine for his crimes, Anakin 
+                                     protests and ultimately intervenes to aid the Sith Lord, solidifying his turn and marking the birth of Darth Sidious's newest apprentice, Darth Vader.
+
+                                </p>
+                                <p> The movie's ending is tragic: the clones turn against the Jedi on Palpatine's command, the Republic transforms into a dictatorship led by Emperor Palpatine, and former master and apprentice Anakin and Obi-Wan engage in a final 
+                                    battle. Obi-Wan ultimately wins by exploiting Anakin's greatest flaw, his arrogance. The battle leaves Anakin burnt and deformed, leading to his iconic life-support suit.
+                                </p>
+                
+                            </section>
+                            <section class="reception">
+                                <h3>Reception</h3>
+                                <p>The movie was the most well-received of the Prequel Trilogy, appreciated for its exploration of Anakin's psychological descent and the way it transforms Darth Vader from a symbol of tyranny to a tragic figure subjected to the power 
+                                    of the Dark Side. It also effectively highlights the Empire's ruthlessness.
+                                </p>
+                                <p>Overall, it serves as a worthy entry in the Star Wars franchise, narratively paving the way for <a href="#original-trilogy">The Original Trilogy</a>.
+                                </p>
+                            </section>
+                        </div>
+                        <section id="trailer">
+                            <h3>Star Wars: Episode III - Revenge of the Sith (2005) Trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/5UnjrG_N8hU?si=uMakn7gty0qqWX9n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+                            web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </section>
+                    </section>
+                    <!--box-office-prequel-trilogy-->
+                    <section class="box-office-table">
+                        <h2>Box office performances</h2>
+                        <table>
+                            <tr>
+                                <th>Movie</th>
+                                <th>Number of tickets sold (in the US) </th>
+                                <th>Lifetime Gross</th>
+                                <th>Lifetime Gross (adjusted to inflation) </th>
+                            </tr>
+
+                            <tr>
+                                <td>Star Wars: Episode I - The Phantom Menace (1999)</td>
+                                <td>90,312,100</td>
+                                <td>$1,027,083,462</td>
+                                <td>$1,925,516,397</td>
+                            </tr>
+
+                            <tr>
+                                <td>Star Wars: Episode II - Attack of the Clones (2002)</td>
+                                <td>53,468,500</td>
+                                <td>$653,780,724</td>
+                                <td>$1,135,056,370</td>
+                            </tr>
+                            <tr>
+                                <td>Star Wars: Episode III - Revenge of the Sith (2005) </td>
+                                <td>59,324,600</td>
+                                <td>$868,390,560</td>
+                                <td>$1,388,766,822</td>
+                            </tr>
+                        </table>
+                        <p>Sources: boxofficemojo.com, screenrant.com</p>
                     </section>
                 </section>
 
-                <section id="episode2">
-                    <h2> Star Wars: Episode II - Attack of the Clones </h2>
-                    <div class ="wrap-img">
-                        <img src="resources/Pictures/movies/episode2.jpg" alt="Episode II poster", id = "episode2-poster">
-                        <section class="description">
-                            <h3>Description</h3>
-                            <p> Star Wars: Episode II – Attack of the Clones is the second movie in The Prequel Trilogy, set ten years after the events of 
-                                Episode I. It shows how the relationship between the Republic and the Separatist forces, led by Count Dooku (a former Jedi
-                                 who has turned to the dark side), has reached a breaking point.
-                            </p>
-                            <p>                               
-                                Jedi Knight Obi-Wan Kenobi, now the master of 19-year-old Anakin Skywalker, is sent on a mission to discover the culprit behind 
-                                a failed assassination attempt on Senator Padmé Amidala. While tasked with protecting her, Anakin falls in love with the senator 
-                                and former queen of Naboo. Meanwhile, Kenobi learns of an army of clones created at the request of a late Jedi, Sifo-Dyas, in 
-                                anticipation of a great war.
+                <hr id="section-divide">
 
-                             </p>
-                            <p> Anakin, Padmé, and Obi-Wan are kidnapped by Geonosians, allies of the Separatists, and their rescue marks the beginning of the Clone Wars 
-                                as Chancellor Palpatine orders the deployment of the newly found clone army on Geonosis.
-                            </p>
-            
+                <!--orginal-trilogy-->
+                <section id="original-trilogy"> 
+                    <h1>The Original Trilogy</h1>
+                    <section id = "intro">
+                        <p> The Original Trilogy is, as the name suggests, the first trilogy released under the Star Wars name. It is what most consider the Star Wars trilogy, 
+                            with the other two trilogies and additional media often seen as supplementary content, due to how well it stands on its own as a cohesive unit in both 
+                            storytelling and world-building.
+                        </p>
+                    </section>
+                    <hr id="movie-divide">
+                    <section id="episode4">
+                        <h2> Star Wars: Episode IV - A New Hope (1977)</h2>
+                        <div class ="wrap-img">
+                            <img src="resources/pictures/movies/episode4.jpg" alt="Episode IV poster", id = "episode4-poster">
+                            <section class="description">
+                                <h3>Description</h3>
+                                <p> Star Wars Episode IV: A New Hope is the first movie of the original trilogy and the first movie released overall in the franchise. 
+                                    It follows the story of Luke Skywalker, a boy from a desert planet called Tatooine, who, through meeting some droids and an old former 
+                                    Jedi named Ben Kenobi, becomes involved in an intergalactic conflict between the Empire and the Rebels who have rallied against its dictatorship.
+
+                                </p>
+                                <p> With Kenobi's help, Luke learns how to use the Force, which proves useful in his and his friends' (Princess Leia, Han Solo, and Chewbacca) quest to 
+                                    aid the Rebellion by destroying the Death Star.
+                                </p>
+                                <p> The Sith, long thought to be extinct, have reemerged, posing a serious obstacle to ending the conflict peacefully.
+                                </p>
+                            </section>
+                            <section class="reception">
+                                <h3>Reception</h3>
+                                <p>To say the movie was well received would be an understatement. It became a global phenomenon, surprising audiences with how far ahead of its time it was. 
+                                    Even without modern CGI, this 1977 film holds up better than some movies released in the 1990s. The world-building and storytelling captivated the masses, 
+                                    who demanded more, and so the movie that was initially titled simply titled "Star Wars" became just the start of a whole new universe.
+                                </p>
+                            </section>
+                        </div>
+                        <section id="trailer">
+                            <h3>Star Wars: Episode IV - A New Hope (1977) Trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/vZ734NWnAHA?si=xjl1uAFMyFl-qTU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                             clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </section>
-                        <section class="reception">
-                            <h3>Reception</h3>
-                            <p>The movie received a mixed reception from fans and critics upon its release. While many praised its efforts in terms of world-building and marking the 
-                                beginning of the Clone Wars, others were left unimpressed by the often "cheesy" dialogue, the romantic subplot, and the overall rushed feel of the action.
-                            </p>
-                            <p>Recently, however, people have begun to appreciate the movie for its role in setting up the more successful Episode III and the very popular animated series 
-                                <a href="#">The Clone Wars </a>.
-                            </p>
+                    </section>
+
+                    <hr id="movie-divide">>
+
+                    <section id="episode5">
+                        <h2> Star Wars: Episode V - The Empire Strikes Back (1980) </h2>
+                        <div class ="wrap-img">
+                            <img src="resources/pictures/movies/episode5.jpg" alt="Episode V poster", id = "episodet-poster">
+                            <section class="description">
+                                <h3>Description</h3>
+                                <p> 
+                                    Star Wars Episode V: The Empire Strikes Back is the second movie in the Original Trilogy. It follows the aftermath of the destruction of the Death Star. 
+                                    The Empire, seeking revenge, is hunting the Rebels. Luke wants to continue his Jedi training that was cut short by Ben Kenobi's death, so he meets Yoda, who shapes Luke into a true Jedi. 
+                                    Meanwhile, the crew of the Millennium Falcon falls into a trap that leads to Han Solo being captured.
+                                    
+                                </p>
+                                <p>                               
+                                    The movie ends with a duel between Darth Vader and Luke, where a shocking revelation is made that changes Luke's life and perspective entirely before he manages to escape.
+
+                                </p>
+                                <p> Anakin, Padmé, and Obi-Wan are kidnapped by Geonosians, allies of the Separatists, and their rescue marks the beginning of the Clone Wars 
+                                    as Chancellor Palpatine orders the deployment of the newly found clone army on Geonosis.
+                                </p>
+                
+                            </section>
+                            <section class="reception">
+                                <h3>Reception</h3>
+                                <p>As revolutionary as <a href="#episode4">Episode IV</a> was, Episode V managed to surpass it. To this day, it is still considered the best Star Wars installment ever released. The storytelling was 
+                                    coherent and intriguing, and the shocking twist at the end left fans and critics alike speechless. It has become the benchmark for future Star Wars movies, and there is no 
+                                    denying that this reputation is well-earned.
+                                </p>
+                            </section>
+                        </div>
+                        <section id="trailer">
+                            <h3>Star Wars: Episode V - The Empire Strikes Back (1980) Trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/JNwNXF9Y6kY?si=SnfjBZ2wyu-NPmeW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </section>
-                    </div>
+                    </section>
+
+                    <hr id="movie-divide">
+
+                    <section id="episode6">
+                        <h2> Star Wars: Episode VI - Return of the Jedi (1983)</h2>
+                        <div class ="wrap-img">
+                            <img src="resources/pictures/movies/episode6.jpg" alt="Episode VI poster", id = "episode6-poster">
+                            <section class="description">
+                                <h3>Description</h3>
+                                <p> Star Wars: Episode VI - Return of the Jedi is the final movie of the Original Trilogy. It follows a now-experienced Jedi, Luke Skywalker, 
+                                    on his quest to save his kidnapped friend Han Solo and to foil the Empire's plans of building a new and improved Death Star, which the evil 
+                                    government intended to use to destroy all who opposed them for good. Luke is still dealing with the aftermath of finding out Darth Vader is his father, 
+                                    and during the film, he learns that Leia is his twin sister. Together, the Millennium Falcon crew leads the Rebellion in a final attack on the Empire by targeting the 
+                                    still-under-construction Death Star II.
+
+                                </p>
+                                <p>The action culminates in a showdown between Luke, Darth Vader, and Emperor Palpatine. After multiple attempts to recruit Luke, Vader begins fighting him under the Emperor's orders. 
+                                    In a shocking twist, Darth Vader turns on the Emperor, killing him to save Luke. By the end of the fight, the Death Star is collapsing, and Luke is unable to save his father, the now-redeemed Anakin Skywalker.
+
+
+                                </p>
+                            </section>
+                            <section class="reception">
+                                <h3>Reception</h3>
+                                <p>The movie was well received by critics and fans, seen as a worthy successor to <a href="#episode5">The Empire Strikes Back</a>. The trilogy ended in a satisfying way that resolved all narrative threads, with a happy ending where good triumphed 
+                                    over evil for the foreseeable future.
+                                </p>
+                            </section>
+                        </div>
+
+                        <section id="trailer">
+                            <h3>Star Wars: Episode VI - Return of the Jedi (1983) Trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7L8p7_SLzvU?si=Akmu7U-W-PbJGA4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                            picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </section>
+                    </section>
+
+                    <!--box-office-orginal-trilogy-->
+                    <section class="box-office-table">
+                        <h2>Box office performances</h2>
+                        <table>
+                            <tr>
+                                <th>Movie</th>
+                                <th>Number of tickets sold (in the US) </th>
+                                <th>Lifetime Gross</th>
+                                <th>Lifetime Gross (adjusted to inflation) </th>
+                            </tr>
+
+                            <tr>
+                                <td>Star Wars: Episode IV - A New Hope (1977)</td>
+                                <td>178,119,500</td>
+                                <td>$775,398,507 </td>
+                                <td>$4,016,281,367 </td>
+                            </tr>
+
+                            <tr>
+                                <td>Star Wars: Episode V - The Empire Strikes Back (1980)</td>
+                                <td>98,273,100</td>
+                                <td>$538,375,067</td>
+                                <td>$2,040,676,716 </td>
+                            </tr>
+                            <tr>
+                                <td>Star Wars: Episode VI - Return of the Jedi (1983)</td>
+                                <td>94,059,400</td>
+                                <td>$475,106,177</td>
+                                <td>$1,489,868,097 </td>
+                            </tr>
+                        </table>
+                        <p>Sources: boxofficemojo.com, screenrant.com</p>
+                    </section>
                 </section>
 
-                <section id="episode3">
-                    <h2> Star Wars: Episode III - Revenge of the Sith </h2>
-                    <div class ="wrap-img">
-                        <img src="resources/Pictures/movies/episode3.jpg" alt="Episode III poster", id = "episode3-poster">
-                        <section class="description">
-                            <h3>Description</h3>
-                            <p> Star Wars: Episode III –Revenge of the Sith is the FINAL movie in The Prequel Trilogy, set three years after the events of 
-                                Episode II. It showcases the last few months of the Clone Wars and Anakin Skywalker's tragic turn the dark side. 
-                            </p>
-                            <p> Chanchellor Palptaine pushes Anakin closer the darkness by feeding into his mistrust in the Jedi Council's methods have and by
-                                convincing him that teh dark side is the only way to safe the life of his now pregnant wife, Padmé. When Palptines reveals himself
-                                as a Sith Lord, he notifies the Jedi Council, but to his disbelief he still hasn't earned their trust. When he hears of Mace Windu's
-                                plan to kill Palpatine for his crimes, he protests and end up interferieng in the Sith Lords aid, solidfiyinh his turn and the birth of
-                                Darth Sidoius's newest apprEntice, Darth Vader. 
+                <hr id="section-divide">
 
-                             </p>
-                            <p> The  movie's endingn his tragic, the clones turn against the Jedi at the command of Palpatine, the Republic turn into a dictatorship led by now Emperor Palpatine and former master and apprEntice Anakin and Obi-Wan
-                                in which Obi-Wan wins by exploiting Anakain's biggest flaw, his arogance. The battles leaves Anakin burnt and deformed which prompts the use of the famous life suit.
-                            </Obi-Wan>
-                            </p>
-            
+                <!--sequel-trilogy-->
+                <section id="sequel-trilogy"> 
+                    <h1>The Sequel Trilogy</h1>
+                    <section id = "intro">
+                        <p> 
+                            The Sequel Trilogy is the first and currently only trilogy released after Disney acquired the rights to the franchise from Lucasfilm. It was created as part of Disney's desire to bring back the beloved 
+                            characters of <a href="#original-trilogy">The Original Trilogy</a> and to build on what was already established, exploring new directions that Star Wars could take.
+                        </p>
+                    </section>
+
+                    <hr id="movie-divide">
+
+                    <section id="episode7">
+                        <h2> Star Wars: Episode VII - The Force Awakens (2015)</h2>
+                        <div class ="wrap-img">
+                            <img src="resources/pictures/movies/episode7.jpg" alt="Episode VII poster", id = "episode7-poster">
+                            <section class="description">
+                                <h3>Description</h3>
+                                <p> Star Wars: Episode VII - The Force Awakens follows the story of a scavenger named Rey, who ends up caught in the conflict between the New Republic and the First Order, an organization that rose 
+                                    from the ashes of the Empire. With Palpatine and Vader gone, their roles have been taken by Supreme Leader Snoke and his apprentice Kylo Ren (formerly Ben Solo), the son of Han and Leia. Kylo's 
+                                    obsession with his grandfather Darth Vader's legacy pushed him toward the Dark Side.
+
+                                </p>
+                                <p> The New Republic's Resistance, led by Leia, along with the help of Rey and a former stormtrooper named Finn, deals a significant blow to the First Order by destroying their Starkiller Base, a superweapon
+                                     capable of annihilating entire solar systems. The movie ends with Rey finding Luke Skywalker, who was revealed earlier to have gone into hiding.
+                                </p>
+                    
+                            </section>
+                            <section class="reception">
+                                <h3>Reception</h3>
+                                <p>The movie was fairly well received by fans and critics, mainly due to the nostalgia of seeing Han Solo, Leia Organa, and Luke Skywalker on the big screen again. It also served as a strong setup that left fans 
+                                    excited for what was to come in the next two movies. However, some were left unimpressed by the numerous parallels drawn between this movie and <a href="#episode4">A New Hope</a>, which, to some, made it feel more like a remake than a truly 
+                                    original standalone movie.
+                                </p>
+                            </section>
+                        </div>
+
+                        <section id="trailer">
+                            <h3>Star Wars: Episode VII - The Force Awakens (2015) Trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sGbxmsDFVnE?si=PN3uhEivgruQN4ZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+                            web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </section>
-                        <section class="reception">
-                            <h3>Reception</h3>
-                            <p>The movie was the most well recieved one out the Prequel Trilogy, because of the way it shows the psicholocgy behinf Anakin's turn and it's satisfying
-                                way in which it morphs Darth Vader life from one of tiranny to one of tragedy and involunatry subjucation to the power of the Dark Side. It also does a good job at shows just how ruthless the Empire really.
-                            </p>
-                            <p>Overall, it serves a worthy entry into the Star Wars franchise that narativelly paves the way into <a href="#"> The Original Trilogy </a>.
-                            </p>
+                    </section>
+
+                    <hr id="movie-divide">
+
+                    <section id="episode8">
+                        <h2> Star Wars: Episode VIII - The Last Jedi (2017)</h2>
+                        <div class ="wrap-img">
+                            <img src="resources/pictures/movies/episode8.jpg" alt="Episode VIII poster", id = "episode8-poster">
+                            <section class="description">
+                                <h3>Description</h3>
+                                <p> 
+                                     Star Wars: Episode VIII - The Last Jedi is the second film in the Sequel Trilogy. It follows the aftermath of Rey finding Luke and learning that he has isolated himself out of fear, blaming himself for Ben Solo's
+                                     turn into Kylo Ren, who is now Supreme Leader and more determined than Snoke to completely wipe out the Resistance. The First Order seeks revenge and chases the Resistance across the galaxy until they reach a New 
+                                     Republic outpost on the planet Crait. 
+                                </p>
+                                <p>                               
+                                    The First Order vastly outguns the Resistance, as the New Republic was unable to fund a large enough army. Just when the galaxy's fate seems bleak, Luke uses all of his remaining life 
+                                    force to project himself across the galaxy, aiding the Resistance and ultimately holding back the First Order.
+                                   
+
+                                </p>
+                        
+                            </section>
+                            <section class="reception">
+                                <h3>Reception</h3>
+                                <p>The movie's reception was largely negative. It undid many of the exciting story threads that <a href="#episode7">Episode VII</a> had set up and completely changed the character of Luke Skywalker, transforming him from a hero who never gives up into an old man 
+                                    who disconnects from the Force and abandons his mission after facing a significant obstacle as a master. Additionally, the New Republic's lack of cooperation with the Resistance seems nonsensical, as the New Republic is supposed to be 
+                                    governed by former Rebels who understand the danger of an army like the First Order and the importance of stopping such evil from seizing control of the galaxy.
+                                </p>
+                                <p>
+                                    The beloved character Finn, who seemed poised to transition from a former enslaved stormtrooper to a Jedi, was reduced to an afterthought, with every hint of Force sensitivity removed. The movie also feels like a remake of <a href="#episode5">Episode V</a>, with the evil 
+                                    army seeking revenge after the destruction of their base and staging a battle on a white planet, though this time the snow is replaced by salt.
+                                </p>
+                            </section>
+                        </div>
+
+                        <section id="trailer">
+                            <h3>Star Wars: Episode VIII - The Last Jedi (2017) Trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q0CbN8sfihY?si=wQm-_D9iNB3EZzgu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </section>
-                    </div>
+                    </section>
+
+                    <hr id="movie-divide">
+
+                    <section id="episode9">
+                        <h2> Star Wars: Episode IX - The Rise of Skywalker (2019)</h2>
+                        <div class ="wrap-img">
+                            <img src="resources/pictures/movies/episode9.jpg" alt="Episode IX poster", id = "episode9-poster">
+                            <section class="description">
+                                <h3>Description</h3>
+                                <p> Star Wars Episode IX: The Rise of Skywalker is the final movie in the Sequel Trilogy and in the Skywalker Saga as a whole. The movie begins with the shocking revelation that Emperor Palpatine is alive and plotting his revenge with an army stationed on the planet Exegol.
+                                     Rey and her team must first locate the planet to end the conflict as quickly as possible. Kylo Ren, too, seeks Exegol, as he wants to determine whether he can control this army or if it's a threat he needs to confront.
+
+                                </p>
+                                <p>Both the Resistance and the First Order eventually make their way to Exegol, where they encounter Palpatine himself, who reveals several surprises. He was behind Snoke all along, implying that Snoke was just a clone created as 
+                                    part of Palpatine's attempts to clone himself. Ultimately, Palpatine reveals that he is Rey's grandfather, a shocking twist considering she was previously thought to be "a nobody," as Kylo Ren had put it, just an orphan with no 
+                                    significant heritage. Kylo Ren, upon seeing what he is up against, has a change of heart and joins Rey to defeat Palpatine once and for all, sacrificing himself in the process.
+                                </p>
+                            </section>
+                            <section class="reception">
+                                <h3>Reception</h3>
+                                <p>This movie, like <a href="#episode8">The Last Jedi</a>, received overwhelmingly negative reviews. Fans and critics alike criticized the decision to resurrect Palpatine, as it undermined Darth Vader's redemption. Additionally, the reveal that Rey was a Palpatine was confusing, as it contradicted the idea that Rey, 
+                                    who was neither part of the Skywalker family nor any notable Force-sensitive lineage, could still be powerful with the Force—an idea that suggested anyone could become a great Jedi regardless of their background. Finally, Kylo Ren's redemption felt rushed, and many believed it would have been 
+                                    a more fitting choice for him to remain the only Skywalker to die still under the influence of the Dark Side of the Force.
+                                </p>
+                            </section>
+                        </div>
+
+                        <section id="trailer">
+                            <h3>Star Wars: Episode IX - The Rise of Skywalker (2019) Trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/8Qn_spdM5Zg?si=hwp1uGKebNHPLERh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen></iframe>
+                        </section>
+                    </section>
+
+                    <!--box-office-sequel-trilogy-->
+                    <section class="box-office-table">
+                        <h2>Box office performances</h2>
+                        <table>
+                            <tr>
+                                <th>Movie</th>
+                                <th>Number of tickets sold (in the US)</th>
+                                <th>Lifetime Gross</th>
+                                <th>Lifetime Gross (adjusted to inflation)</th>
+                            </tr>
+
+                            <tr>
+                                <td>Star Wars: Episode VII - The Force Awakens (2015) </td>
+                                <td>108,115,100</td>
+                                <td>$2,071,310,218</td>
+                                <td>$2,735,171,601</td>
+                            </tr>
+
+                            <tr>
+                                <td>Star Wars: Episode VIII - The Last Jedi (2017)</td>
+                                <td>67,594,500</td>
+                                <td>$1,334,407,706</td>
+                                <td>$1,700,302,821</td>
+                            </tr>
+                            <tr>
+                                <td>Star Wars: Episode IX - The Rise of Skywalker (2019)</td>
+                                <td>54,984,300</td>
+                                <td>$1,077,022,372</td>
+                                <td>$1,315,780,719</td>
+                            </tr>
+                        </table>
+                        <p>Sources: boxofficemojo.com, screenrant.com</p>
+                    </section>
+
+
+                </section>
+                <hr id="section-divide">
+
+                <!--anthology-movies-->
+                <section id="anthology-movies"> 
+                    <h1>Anthology Movies</h1>
+                    <section id = "intro">
+                        <p> The Star Wars Anthology movies, marketed as A Star Wars Story, are standalone films separate from the main Skywalker Saga.
+                            These movies aim to explore backstories of specific characters and provide additional context to events that shape the Star Wars universe,
+                            enhancing the lore without directly advancing the central Skywalker storyline.
+                        </p>
+                    </section>
+
+                    <hr id="movie-divide">
+
+                    <section id="rogue-one">
+                        <h2> Rogue One: A Star Wars Story </h2>
+                        <div class ="wrap-img">
+                            <img src="resources/pictures/movies/rogue-one.jpg" alt="Rogue One poster", id = "rogue-one-poster">
+                            <section class="description">
+                                <h3>Description</h3>
+                                <p> Rogue One: A Star Wars Story is set just before the events of <a href="#episode4">A New Hope</a> and reveals how the Rebel Alliance came into possession of the Death Star plans, critical for exploiting its design flaws in the later film.
+                
+                                </p>
+                                <p>  A group of unlikely allies, led by Jyn Erso and Cassian Andor, is at the heart of this mission, showcasing the heroism and sacrifices the Rebel Alliance is known for.
+                                    The movie concludes with the rebels successfully transmitting the plans, narrowly escaping Darth Vader's pursuit and ultimately delivering them into the safe hands of Princess Leia Organa, setting the stage for the original Star Wars saga.
+                                </p>
+                    
+                            </section>
+                            <section class="reception">
+                                <h3>Reception</h3>
+                                <p>The movie was widely praised by fans and critics for bringing something new to the Star Wars universe, a story that wasn't centered on the Skywalker family. 
+                                    This fresh approach allowed viewers to experience the galactic conflict from the perspective of everyday people whose lives were shattered by the Empire's oppressive rule. 
+                                    The film highlighted the courage and resilience of these individuals, giving depth to the Rebels' fight. It also portrayed the Empire's ruthlessness and arrogance, as they continued
+                                     developing the Death Star despite knowing about a small vulnerability, one they deemed too insignificant to be exploited.
+                                </p>
+                            </section>
+                        </div>
+                        <section id="trailer">
+                            <h3>Rogue One: A Star Wars Story Trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/frdj1zb9sMY?si=EfZiC2wUEwZB_B36" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </section>
+                    </section>
+
+                    <hr id="movie-divide">
+
+                    <section id="solo">
+                        <h2> Solo: A Star Wars Story </h2>
+                        <div class ="wrap-img">
+                            <img src="resources/pictures/movies/solo.jpg" alt="Solo poster", id = "solo-poster">
+                            <section class="description">
+                                <h3>Description</h3>
+                                <p> Solo: A Star Wars Story is set about ten years before the events of A New Hope and follows a young Han Solo as he matures into the smuggler we later encounter. 
+                                    The film details how he meets Lando Calrissian and comes to possess the Millennium Falcon, as well as the origins of his deep bond with Chewbacca. 
+                                </p>
+                                <p>                               
+                                    It also showcases the criminal underworld of the Star Wars universe, featuring characters like Qi'ra, who becomes the public face of the Crimson Dawn after betraying Solo,
+                                     while Darth Maul remains the puppeteer from the shadows.
+                                </p>
+                        
+                            </section>
+                            <section class="reception">
+                                <h3>Reception</h3>
+                                <p>The movie received underwhelming reviews from fans and critics. Many felt the origin story of Han was rushed, as many key events in his life occurred within the span of a week, making his character 
+                                    arc feel incomplete. Additionally, it came at a low point in the Star Wars franchise, only a few months after the release of the controversial <a href="#episode8">The Last Jedi</a>. People were not happy with the direction Disney was taking the Star Wars saga, and the negativity spilled over into this movie.
+ 
+                                </p>
+                                <p>It wasn't the success Disney was hoping for, and so the plans for a Solo trilogy and any other projects under the Anthology umbrella were canceled.</p>
+                            </section>
+                        </div>
+
+                        <section id="trailer">
+                            <h3>Solo: A Star Wars Story</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jPEYpryMp2s?si=p0gBdf4jVufePAR6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </section>
+                    </section>
+                
+                    
+
+                    <!--box-office-anthology-->
+                    <section class="box-office-table">
+                        <h2>Box office performances</h2>
+                        <table>
+                            <tr>
+                                <th>Movie</th>
+                                <th>Number of tickets sold (in the US) </th>
+                                <th>Lifetime Gross</th>
+                                <th>Lifetime Gross (adjusted to inflation) </th>
+                            </tr>
+
+                            <tr>
+                                <td>Rogue One: A Star Wars Story</td>
+                                <td>60,441,600</td>
+                                <td>$1,058,684,742</td>
+                                <td>	
+                                    $1,377,714,495</td>
+                            </tr>
+
+                            <tr>
+                                <td>Solo: A Star Wars Story</td>
+                                <td>22,848,000</td>
+                                <td>$392,924,807</td>
+                                <td>$488,727,876</td>
+                            </tr>
+                        </table>
+                        <p>Sources: boxofficemojo.com, screenrant.com</p>
+                    </section>
+                </section>
+
+                <hr id="section-divide">
+
+                <section id="box-office-ranking">
+                    <h1>Overall Box Office Ranking </h1>
+                    <h2>based on Lifetime Gross (adjusted to inflation)</h2>
+                    <table>
+                        <tr>
+                            <th>Postion</th>
+                            <th>Movie</th>
+                            <th>Number of tickets sold (in the US) </th>
+                            <th>Lifetime Gross</th>
+                            <th>Lifetime Gross (adjusted to inflation) </th>
+                        </tr>
+
+                        <tr>
+                            <td>1.</td>
+                            <td>Star Wars: Episode IV - A New Hope (1977)</td>
+                            <td>178,119,500</td>
+                            <td>$775,398,507 </td>
+                            <td>$4,016,281,367 </td>
+                        </tr>
+
+                        <tr>
+                            <td>2.</td>
+                            <td>Star Wars: Episode VII - The Force Awakens (2015) </td>
+                            <td>108,115,100</td>
+                            <td>$2,071,310,218</td>
+                            <td>$2,735,171,601</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>3.</td>
+                            <td>Star Wars: Episode V - The Empire Strikes Back (1980)</td>
+                            <td>98,273,100</td>
+                            <td>$538,375,067</td>
+                            <td>$2,040,676,716 </td>
+                        </tr>
+
+                        <tr>
+                            <td>4.</td>
+                            <td>Star Wars: Episode I - The Phantom Menace (1999)</td>
+                            <td>90,312,100</td>
+                            <td>$1,027,083,462</td>
+                            <td>$1,925,516,397</td>
+                        </tr>
+
+                        <tr>
+                            <td>5.</td>
+                            <td>Star Wars: Episode VIII - The Last Jedi (2017)</td>
+                            <td>67,594,500</td>
+                            <td>$1,334,407,706</td>
+                            <td>$1,700,302,821</td>
+                        </tr>
+
+                        <tr>
+                            <td>6.</td>
+                            <td>Star Wars: Episode VI - Return of the Jedi (1983)</td>
+                            <td>94,059,400</td>
+                            <td>$475,106,177</td>
+                            <td>$1,489,868,097 </td>
+                        </tr>
+
+                        <tr>
+                            <td>7.</td>
+                            <td>Star Wars: Episode III - Revenge of the Sith (2005) </td>
+                            <td>59,324,600</td>
+                            <td>$868,390,560</td>
+                            <td>$1,388,766,822</td>
+                        </tr>
+
+                        <tr>
+                            <td>8.</td>
+                            <td>Rogue One: A Star Wars Story</td>
+                            <td>60,441,600</td>
+                            <td>$1,058,684,742</td>
+                            <td>	
+                                $1,377,714,495</td>
+                        </tr>
+
+                        <tr>
+                            <td>9.</td>
+                            <td>Star Wars: Episode IX - The Rise of Skywalker (2019)</td>
+                            <td>54,984,300</td>
+                            <td>$1,077,022,372</td>
+                            <td>$1,315,780,719</td>
+                        </tr>
+
+                        <tr>
+                            <td>10.</td>
+                            <td>Star Wars: Episode II - Attack of the Clones (2002)</td>
+                            <td>53,468,500</td>
+                            <td>$653,780,724</td>
+                            <td>$1,135,056,370</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>11.</td>
+                            <td>Solo: A Star Wars Story</td>
+                            <td>22,848,000</td>
+                            <td>$392,924,807</td>
+                            <td>$488,727,876</td>
+                        </tr>
+                    </table>
+                    <p>Sources: boxofficemojo.com, screenrant.com</p>
+
                 </section>
             </main>
+
+            <!--sidebar-->
             <div class="sidebar">
                 <section id="prequel-cast">
                     <h2> The Prequel Trilogy Cast: </h2>
@@ -210,6 +799,8 @@
                     </ul>
                 </section>
 
+                <hr id="section-divide">
+
                 <section id="orginal-cast">
                     <h2> The Original Trilogy Cast: </h2>
                     <ul>
@@ -230,6 +821,8 @@
                         <li> <span class="actor-name">Cecil F. H. Davies</span> as General Dodonna</li>
                     </ul>
                 </section>
+
+                <hr id="section-divide">
 
                 <section id="sequel-cast">
                     <h2> The Sequel Trilogy Cast: </h2>
@@ -253,7 +846,9 @@
                     </ul>
                 </section>
 
-                <section id="sequel-cast">
+                <hr id="section-divide">
+
+                <section id="antho-cast">
                     <h2> The Anthology Movies Cast: </h2>
                     <section id="rogue-one-cast"></section>
                         <h3>Rogue One</h3>
@@ -273,7 +868,7 @@
                             <li> <span class="actor-name">Ebon Moss-Bachrach</span> as the pilot (Cameo)</li>
                         </ul>
                     </section>
-
+                    
                     <section id="solo-cast"></section>
                         <h3>Solo</h3>
                         <ul>
@@ -294,11 +889,47 @@
                         </ul>
                     </section>
                 </section>
+
+                <hr id="section-divide">
+
+                <section id="propaganda-posters">
+                    <img src="resources/pictures/posters/poster1.png" alt="poster1r", id = "poster1">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster2.jpg" alt="poster2", id = "poster2">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster3.jpg" alt="poster3", id = "poster3">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster4.png" alt="poster4", id = "poster4">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster5.png" alt="poster5", id = "poster5">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster6.jpg" alt="poster6", id = "poster6">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster7.jpg" alt="poster7", id = "poster7">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster8.jpg" alt="poster8", id = "poster8">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster9.png" alt="poster9", id = "poster9">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster10.jpg" alt="poster10", id = "poster10">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster11.png" alt="poster11", id = "poster11">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster12.png" alt="poster12", id = "poster12">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster13.png" alt="poster13", id = "poster13">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster14.png" alt="poster14", id = "poster14">
+                    <hr id="movie-divide">
+                    <img src="resources/pictures/posters/poster15.jpg" alt="poster15", id = "poster15">
+                </section>
+                <hr id="section-divide">
+
             </div>
             <footer>Created by Nedelcu Alexandru-Constantin (FMI - 141)</footer>
         </div>
         <a href="#" class="back-to-top"> 
-            <img src="resources/Pictures/xwing.png" alt="xwing" id="xwing-button">
+            <img src="resources/pictures/xwing.png" alt="xwing" id="xwing-button">
         </a>
     </body>
 </html>
