@@ -151,8 +151,13 @@ html {
 }
 
 .back-to-top {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    min-width: 2em;
+    min-width: 2em;
     position: fixed;
-    bottom: 6.5rem;
+    bottom: 6rem;
     right: 2.5rem;
     background: #262626;
     border-radius: 1rem;
@@ -160,6 +165,12 @@ html {
     text-decoration: none;
     transition: 0.2s ease-out;
 }
+
+#xwing-button {
+    min-width: 3em;
+    min-height: 3em;
+}
+
 
 .back-to-top:hover {
     background: url(pictures/hyperspace.png)
@@ -229,14 +240,18 @@ tr:nth-child(even):hover {
     font-size: 0.75em;
 }
 
-#section-divide {
+.section-divide {
     border: 0.5em solid #262626;
 }
 
-#movie-divide {
+.movie-divide {
     border: 0.25em dashed #262626;
 }
 
 #propaganda-posters > img {
     width: 100%;
+}
+
+iframe {
+    border: none;
 }
