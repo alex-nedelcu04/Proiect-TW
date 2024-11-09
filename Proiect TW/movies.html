@@ -15,7 +15,10 @@
     </head>
     <body>
         <header>
-            <img src="resources/pictures/star-wars-logo.png" alt="Star Wars Logo" id="sw-logo">
+            <input type="checkbox" id="logo-click">
+            <label for="logo-click">
+                <img src="resources/pictures/star-wars-logo.png" alt="Star Wars Logo" id="sw-logo">
+            </label>
         </header>
         <div class="grid-container">
             <!--meniu navigare-->
@@ -674,7 +677,7 @@
                     <h2>based on Lifetime Gross (adjusted to inflation)</h2>
                     <table>
                         <tr>
-                            <th>Postion</th>
+                            <th id="position">Postion</th>
                             <th>Movie</th>
                             <th>Number of tickets sold (in the US) </th>
                             <th>Lifetime Gross</th>
@@ -682,7 +685,7 @@
                         </tr>
 
                         <tr>
-                            <td>1.</td>
+                            <td>1</td>
                             <td>Star Wars: Episode IV - A New Hope (1977)</td>
                             <td>178,119,500</td>
                             <td>$775,398,507 </td>
@@ -690,7 +693,7 @@
                         </tr>
 
                         <tr>
-                            <td>2.</td>
+                            <td>2</td>
                             <td>Star Wars: Episode VII - The Force Awakens (2015) </td>
                             <td>108,115,100</td>
                             <td>$2,071,310,218</td>
@@ -698,7 +701,7 @@
                         </tr>
                         
                         <tr>
-                            <td>3.</td>
+                            <td>3</td>
                             <td>Star Wars: Episode V - The Empire Strikes Back (1980)</td>
                             <td>98,273,100</td>
                             <td>$538,375,067</td>
@@ -706,7 +709,7 @@
                         </tr>
 
                         <tr>
-                            <td>4.</td>
+                            <td>4</td>
                             <td>Star Wars: Episode I - The Phantom Menace (1999)</td>
                             <td>90,312,100</td>
                             <td>$1,027,083,462</td>
@@ -714,7 +717,7 @@
                         </tr>
 
                         <tr>
-                            <td>5.</td>
+                            <td>5</td>
                             <td>Star Wars: Episode VIII - The Last Jedi (2017)</td>
                             <td>67,594,500</td>
                             <td>$1,334,407,706</td>
@@ -722,7 +725,7 @@
                         </tr>
 
                         <tr>
-                            <td>6.</td>
+                            <td>6</td>
                             <td>Star Wars: Episode VI - Return of the Jedi (1983)</td>
                             <td>94,059,400</td>
                             <td>$475,106,177</td>
@@ -730,7 +733,7 @@
                         </tr>
 
                         <tr>
-                            <td>7.</td>
+                            <td>7</td>
                             <td>Star Wars: Episode III - Revenge of the Sith (2005) </td>
                             <td>59,324,600</td>
                             <td>$868,390,560</td>
@@ -738,7 +741,7 @@
                         </tr>
 
                         <tr>
-                            <td>8.</td>
+                            <td>8</td>
                             <td>Rogue One: A Star Wars Story</td>
                             <td>60,441,600</td>
                             <td>$1,058,684,742</td>
@@ -747,7 +750,7 @@
                         </tr>
 
                         <tr>
-                            <td>9.</td>
+                            <td>9</td>
                             <td>Star Wars: Episode IX - The Rise of Skywalker (2019)</td>
                             <td>54,984,300</td>
                             <td>$1,077,022,372</td>
@@ -755,7 +758,7 @@
                         </tr>
 
                         <tr>
-                            <td>10.</td>
+                            <td>10</td>
                             <td>Star Wars: Episode II - Attack of the Clones (2002)</td>
                             <td>53,468,500</td>
                             <td>$653,780,724</td>
@@ -764,7 +767,7 @@
 
 
                         <tr>
-                            <td>11.</td>
+                            <td>11</td>
                             <td>Solo: A Star Wars Story</td>
                             <td>22,848,000</td>
                             <td>$392,924,807</td>
@@ -779,7 +782,7 @@
             <!--sidebar-->
             <div class="sidebar">
                 <section id="prequel-cast">
-                    <h2> The Prequel Trilogy Cast: </h2>
+                    <h2>  <a href="movies.html#prequel-trilogy">The Prequel Trilogy</a> Cast: </h2>
                     <ul>
                         <li> <span class="actor-name">Liam Neeson</span> as Qui-Gon Jinn</li>
                         <li> <span class="actor-name">Ewan McGregor</span> as Obi-Wan Kenobi</li>
@@ -805,7 +808,7 @@
                 <hr class="section-divide">
 
                 <section id="orginal-cast">
-                    <h2> The Original Trilogy Cast: </h2>
+                    <h2>  <a href="movies.html#original-trilogy">The Original Trilogy</a> Cast: </h2>
                     <ul>
                         <li> <span class="actor-name">Mark Hamill</span> as Luke Skywalker</li>
                         <li> <span class="actor-name">Harrison Ford</span> as Han Solo</li>
@@ -828,7 +831,7 @@
                 <hr class="section-divide">
 
                 <section id="sequel-cast">
-                    <h2> The Sequel Trilogy Cast: </h2>
+                    <h2>  <a href="movies.html#sequel-trilogy">The Sequel Trilogy</a> Cast: </h2>
                     <ul>
                         <li> <span class="actor-name">Daisy Ridley</span> as Rey</li>
                         <li> <span class="actor-name">John Boyega</span> as Finn</li>
@@ -852,9 +855,9 @@
                 <hr class="section-divide">
 
                 <section id="antho-cast">
-                    <h2> The Anthology Movies Cast: </h2>
+                    <h2>  <a href="movies.html#anthology-movies">The Anthology Movies</a> Cast: </h2>
                     <div id="rogue-one-cast">
-                        <h3>Rogue One</h3>
+                        <h2><a href="movies.html#rogue-one">Rogue One</a></h2>
                         <ul>
                             <li> <span class="actor-name">Felicity Jones</span> as Jyn Erso</li>
                             <li> <span class="actor-name">Diego Luna</span> as Cassian Andor</li>
@@ -873,7 +876,7 @@
                     </div>
                     
                     <div id="solo-cast">
-                        <h3>Solo</h3>
+                        <h2><a href="movies.html#rogue-one">Solo</a></h2>
                         <ul>
                             <li> <span class="actor-name">Alden Ehrenreich</span> as Han Solo</li>
                             <li> <span class="actor-name">Joonas Suotamo</span> as Chewbacca</li>
@@ -925,8 +928,9 @@
                     <img src="resources/pictures/posters/poster14.png" alt="poster14" id = "poster14">
                     <hr class="movie-divide">
                     <img src="resources/pictures/posters/poster15.jpg" alt="poster15" id = "poster15">
+                    <hr class="movie-divide">
                 </div>
-                <hr class="section-divide">
+            <br>
 
             </div>
             <footer>Created by Nedelcu Alexandru-Constantin (FMI - 141)</footer>
