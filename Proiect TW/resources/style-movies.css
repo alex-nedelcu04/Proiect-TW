@@ -1,4 +1,3 @@
-
 body {
     background-image: url(pictures/star-wars-background.jpeg);
     color: white;
@@ -61,25 +60,82 @@ body {
     
 }
 
+.grid-container {
+    animation: transition-load-page 1s;
+}
+
+@keyframes transition-load-page {
+    from {
+        opacity: 0;
+        transform: translateY(10.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 main {
     border-radius: 25px;
     background-color: #000000;
-    border: #ffe81f;
-    border-width: 0.15em;
-    border-style: solid;
+    border: #ffe81f solid 0.15em;
     grid-area: main;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 1%;
     font-size: 18px;
 }
 
+.trilogy-title {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    border: #ffe81f solid 0.15em;
+    border-radius: 25px;
+    padding: 0.2em;
+    transition: border-width 0.3s ease-in-out;
+}
+
+.trilogy-title:hover {
+    border-width: 0.5em;
+}
+
+.box-office-title {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    border: #ffe81f dashed 0.15em;
+    border-radius: 25px;
+    padding: 0.2em;
+}
+
+
+
+@media(max-width:40em) {
+    .trilogy-title > h1 {
+        font-size: 1.25em;
+    }
+
+    .trilogy-title {
+        border-radius: 18px;
+    }
+
+    .box-office-title > h1 {
+        font-size: 1.25em;
+    }
+
+    .box-office-title {
+        border-radius: 18px;
+    }
+}
+
+
 
 footer {
     border-radius: 25px;
     background-color: #000000;
-    border: #ffe81f;
-    border-width: 0.15em;
-    border-style: solid;
+    border: #ffe81f solid 0.15em;
     grid-area: footer;
     padding: 1%;
 }
@@ -87,9 +143,7 @@ footer {
 .sidebar {
     border-radius: 25px;
     background-color: #000000;
-    border: #ffe81f;
-    border-width: 0.15em;
-    border-style: solid;
+    border: #ffe81f solid 0.15em;
     grid-area: sidebar;
 }
 
@@ -169,9 +223,7 @@ h1, h2, h3 {
 nav {
     border-radius: 25px;
     background-color: #000000;
-    border: #ffe81f;
-    border-width: 0.15em;
-    border-style: solid;
+    border: #ffe81f solid 0.15em;
     grid-area: nav;
     font-size: 18px;
     text-transform: uppercase;
