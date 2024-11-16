@@ -61,6 +61,7 @@ main {
     grid-area: main;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 1%;
+    padding-right: 1em;
     font-size: 1.125rem;
 }
 
@@ -92,15 +93,6 @@ header {
     
 }
 
-.introduction-title {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    border: #ffe81f solid 0.15em;
-    text-transform: uppercase;
-    border-radius: 25px;
-    padding: 0.2em;
-}
 
 @media(max-width:40em) {
     .introduction-title > h1 {
@@ -213,14 +205,20 @@ iframe {
     100% { filter: hue-rotate(360deg); }
 }
 
-.introduction-title {
+.intro-container {
     display: flex;
-    justify-self: center;
+    justify-content: center;
+}
+
+.introduction-title {
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
     border: #ffe81f solid 0.15em;
     border-radius: 25px;
     padding: 0.2em;
     margin-top: 0.5em;
+    filter: hue-rotate(0deg);
     transition: 
         border-width 0.3s ease-in-out,
         border-color 0.3s ease-in-out,

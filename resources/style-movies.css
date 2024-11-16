@@ -84,7 +84,9 @@ main {
     grid-area: main;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 1%;
+    padding-right: 1em;
     font-size: 1.125rem;
+
 }
 
 @keyframes cycle-colors {
@@ -96,14 +98,21 @@ main {
     100% { filter: hue-rotate(360deg); }
 }
 
-.trilogy-title {
+
+.trilogy-container {
     display: flex;
-    justify-self: center;
+    justify-content: center;
+}
+
+.trilogy-title {
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
     border: #ffe81f solid 0.15em;
     border-radius: 25px;
     padding: 0.2em;
     margin-top: 0.5em;
+    filter: hue-rotate(0deg);
     transition: 
         border-width 0.3s ease-in-out,
         border-color 0.3s ease-in-out,
@@ -129,6 +138,10 @@ main {
 }
 
 
+.box-office-container {
+    display: flex;
+    justify-content: center;
+}
 
 .box-office-title {
     display: flex;
@@ -215,7 +228,7 @@ header {
     
 }
 
-@media(min-width:10em) {
+@media(min-width:0em) {
     #sw-logo {
         width: 30vw;
     }
