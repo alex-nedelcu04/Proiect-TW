@@ -1,0 +1,520 @@
+body {
+    background-image: url(pictures/star-wars-background.jpeg);
+    color: white;
+    
+    padding: 1%;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.8fr 0.2fr;
+    grid-template-areas: 
+         "nav"
+         "main"
+         "footer";
+    grid-gap: 1rem;
+    animation: transition-load-page 1s;
+}
+
+@keyframes transition-load-page {
+    from {
+        opacity: 0;
+        transform: translateY(10.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    border-radius: 25px;
+    background-color: #000000;
+    border: #ffe81f solid 0.15em;
+    grid-area: main;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1%;
+    font-size: 1.125rem;
+}
+
+
+footer {
+    border-radius: 25px;
+    background-color: #000000;
+    border: #ffe81f solid 0.15em;
+    grid-area: footer;
+    padding: 1%;
+}
+
+
+header {
+    display: flex;
+    justify-content: left;
+    overflow: hidden;
+    width: 98%;
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+    
+}
+
+
+#sw-logo {
+    width: 10%;
+    position: relative;
+    filter: hue-rotate(0deg);
+    cursor: pointer;
+    
+}
+
+@media(min-width:10em) {
+    #sw-logo {
+        width: 30vw;
+    }
+}
+
+@media(min-width:20em) {
+    #sw-logo {
+        width: 20vw;
+    }
+}
+@media(min-width:40em) {
+    #sw-logo {
+        width: 10vw;
+    }
+}
+
+
+
+header > input {
+    opacity: 0;
+}
+
+#logo-click:checked + label #sw-logo {
+    animation: logo-animation linear 15s infinite;
+}
+
+@keyframes logo-animation {
+    0% { 
+        transform: translateX(-100%) scale(1);
+        filter: hue-rotate(180deg); 
+    }
+    50% { transform: translateX(50vw) scale(1.5); 
+         filter: hue-rotate(0deg); 
+    }
+    100% { transform: translateX(100vw) scale(1); 
+        filter: hue-rotate(180deg); 
+    }
+}
+
+
+
+#release-order-pic {
+    width: 20%;
+    transition: transform 0.2s ease;
+}
+
+#chrono-order-pic {
+    width: 40%;
+    transition: transform 0.2s ease;
+}
+@media (max-width: 35em) {
+
+    #release-order-pic:hover {
+        transform: scale(1.5) translate(20%, 20%);
+    }
+
+    #chrono-order-pic:hover {
+        transform: scale(1.3) translate(20%, 20%);
+    }
+}
+h1 {
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+#introduction h1, h2, h3 {
+    color:#ffe81f;
+    text-shadow:  2px 2px #000000;
+}
+
+.introduction-title {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    border: #ffe81f solid 0.15em;
+    border-radius: 25px;
+    padding: 0.2em;
+    margin-top: 0.5em;
+    filter: hue-rotate(0deg);
+    transition: 
+        border-width 0.3s ease-in-out,
+        border-color 0.3s ease-in-out,
+        font-size 0.3s ease-in-out;
+        
+}
+
+
+.introduction-title:hover {
+    border-width: 0.35em;
+    background-color: #ffe81f;
+    border-color: #c8b61a;
+    font-size: 1.25em;
+    animation: cycle-colors 5s linear infinite;
+    box-shadow:
+        0 0 0.5em #ffe81f,
+        0 0 1.5em #ffe81f,
+        0 0 1.5em #ffe81f;
+}
+
+.introduction-title:hover > #intro-h1 {
+    color: #000000;
+    text-shadow: none;
+}
+
+
+@media(min-width:0em) {
+    .introduction-title > #intro-h1 {
+        font-size: 0.75em;
+    }
+
+    .introduction-title {
+        border-radius: 14px;
+    }
+
+}
+
+@media(min-width:40em) {
+    .introduction-title > #intro-h1 {
+        font-size: 1.5em;
+    }
+
+    .introduction-title {
+        border-radius: 18px;
+    }
+}
+
+/* Meniu navigare */
+
+nav {
+    border-radius: 25px;
+    background-color: #000000;
+    border: #ffe81f solid 0.15em;
+    grid-area: nav;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
+
+.dropdown-menu::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+}
+
+.dropdown-menu > ul > li {
+    float: left;
+    position: relative;
+} 
+.dropdown-menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-wrap: nowrap;
+    padding: 15px 20px;
+}
+
+.dropdown-menu ul li:hover a {
+    background: #ffe81f;
+    color: black;
+}
+
+.dropdown-menu ul ul {
+    font-size: 0.81rem;
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    padding:0;
+    min-width: 120px;
+    z-index: 10;
+}
+
+.dropdown-menu ul li:hover > ul {
+    display: block;
+}
+
+.dropdown-menu ul ul li:hover a {
+    background: #262626;
+    color: white;
+}
+
+.dropdown-menu ul ul li {
+    position: relative;
+}
+
+@media (min-width:10em) {
+    .dropdown-menu ul ul ul {
+        top: -200%;
+        
+    }
+}
+
+@media (min-width:20em) {
+    .dropdown-menu ul ul ul {
+        top: 100%;
+        left: -100%;
+        
+    }
+}
+
+@media (min-width:40em) {
+    .dropdown-menu ul ul ul {
+        top: 0;
+        left: 100%;
+    }
+}
+
+
+/* Back to top button */
+html {
+    scroll-behavior: smooth;
+}
+
+#xwing-button {
+    max-width:4vw;
+    height: auto;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    min-width: 2em;
+    min-width: 2em;
+    position: fixed;
+    bottom: 6rem;
+    right: 2.5rem;
+    background: #000000;
+    border-width: 0.07em;
+    border-style: solid;
+    border-color: #ffe81f;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+#xwing-button {
+    max-width: 5em;
+    min-height: 5em;
+}
+
+@media (max-width:40em) {
+    #xwing-button {
+        max-width: 3em;
+        min-height: 3em;
+    }
+     
+}
+.back-to-top:hover {
+    background: url(pictures/hyperspace.png)
+}
+
+.back-to-top:hover img {
+    transform: translateY(-4px);
+}
+
+.section-divide {
+    border: 0.25em solid #424242;
+}
+
+.subsection-divide {
+    border: 0.25em dashed #424242;
+}
+
+/* lightsaber */
+:root {
+    --blade-hue: 195;
+
+}
+
+
+
+.lightsaber-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows:  1fr;
+    place-items: center;
+    text-transform: uppercase;
+   
+}
+
+[name=color] {
+    grid-row: 1/2;
+    align-self: end;
+    margin: 0.5em;
+}
+
+label:not(.hilt) {
+    color: white;
+    font-weight: bold;
+    align-self: start;
+}
+
+.lightsaber {
+    margin-top: 25em;
+    grid-column: 1/-1;
+    position: relative;
+    
+}
+
+
+#on-off {
+    position: absolute;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+
+}
+
+.hilt {
+    display: block;
+    width: .75rem;
+    height: 7rem;
+    background-color: red;
+    border-radius: 0 0 4px 4px;
+    background-image: linear-gradient(
+        silver 0 10px,
+        rgb(58, 57, 57) 0 14px,
+        silver 0 15px,
+        #424242 0 20px,
+        silver 0 22px,
+        #424242 0 25px,
+        silver 0 27px,
+        #424242 0 30px,
+        silver 0 32px,
+        #424242 0 35px,
+        silver 0 37px,
+        #424242 0 40px,
+        silver 0 42px,
+        #424242 0 45px,
+        silver 0 47px,
+        #424242 0 50px,
+        silver 0 60px,
+        #424242 60px 80px,
+        silver 0 100%
+    );
+}
+
+.blade {
+    position: absolute;
+    background: white;
+    height: 350%;
+    width: 100%;
+    bottom: 100%;
+    border-radius: 100vw 100vw 0 0;
+    box-shadow: 
+        0 0 1em hsl(var(--blade-hue) 100% 50% / .8),
+        0 0 1.5em hsl(var(--blade-hue) 100% 50% / .75),
+        0 0 2em hsl(var(--blade-hue) 100% 50% / .5),
+        0 0 3em hsl(var(--blade-hue) 100% 50% / .3),
+        0 0 5em hsl(var(--blade-hue) 100% 50% / .2);
+
+    transition: transform 90ms ease-out;
+    transform-origin: bottom;
+}
+
+.blade::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsl(var(--blade-hue) 100% 50%);
+    border-radius: inherit;
+    filter:blur(.5em);
+    opacity: 1;
+    animation: pulse linear 1.5s infinite;
+   
+}
+
+.blade::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    border-radius: inherit;
+    z-index: 10;
+}
+@keyframes pulse {
+    50% {
+        opacity: .5;
+    }
+}
+
+/* on/off */
+#on-off:not(:checked) + .blade {
+    transform: scaleY(0);
+}
+
+#on-off:checked + .blade {
+    transform: scaleY(1);
+}
+
+#blue:checked ~ .lightsaber{
+    --blade-hue: 195;
+}
+
+
+#green:checked ~ .lightsaber{
+    --blade-hue: 120;
+}
+
+#yellow:checked ~ .lightsaber{
+    --blade-hue: 60;
+}
+
+#purple:checked ~ .lightsaber{
+    --blade-hue: 290;
+}
+
+#red:checked ~ .lightsaber{
+    --blade-hue: 360;
+}
+
+@keyframes cycle-colors {
+    0% { filter: hue-rotate(0deg);}
+    20% { filter: hue-rotate(60deg); }
+    40% { filter: hue-rotate(120deg); }
+    60% { filter: hue-rotate(180deg); }
+    80% { filter: hue-rotate(240deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+#cycle:checked ~ .lightsaber{
+    animation: cycle-colors linear 5s infinite;
+}
+
+@media (max-width: 80em) {
+    #release-order-pic {
+        width: 70%;
+    }
+
+    #chrono-order-pic {
+        width: 99%;
+    }
+}
