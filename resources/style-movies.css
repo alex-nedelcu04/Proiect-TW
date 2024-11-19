@@ -586,6 +586,13 @@ tr:nth-child(even):hover {
     }
 }
 
+@media all and (max-width: 25em){
+    .wrap-img img {
+        width: 60%;
+    }
+}
+
+
 @media all and  (max-width: 20em) {
 
     table {

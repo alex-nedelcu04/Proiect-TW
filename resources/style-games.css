@@ -166,6 +166,13 @@ h1, h2, h3 {
     }
 }
 
+@media all and  (max-width: 20em) {
+
+    .wrap-img img {
+        width: 70%;
+    }
+}
+
 
 iframe {
     border: none;
