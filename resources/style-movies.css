@@ -230,7 +230,7 @@ header {
 
 @media all and (min-width:0em) {
     #sw-logo {
-        width: 30vw;
+        width: 40vw;
     }
 }
 
@@ -313,6 +313,7 @@ iframe {
 /* Navigation menu */
 
 nav {
+    
     border-radius: 25px;
     background-color: #000000;
     border: #ffe81f solid 0.15em;
@@ -343,8 +344,20 @@ nav {
     color: #fff;
     text-wrap: nowrap;
     padding: 15px 20px;
+
 }
 
+@media all and (max-width: 30em) {
+
+    .dropdown-menu ul {
+        font-size: 0.8rem;
+    }
+    
+    .dropdown-menu ul li a {
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+}
 .dropdown-menu ul li:hover a {
     background: #ffe81f;
     color: black;
@@ -384,7 +397,7 @@ nav {
 @media all and  (min-width:20em) {
     .dropdown-menu ul ul ul {
         top: 100%;
-        left: -100%;
+        left: -150%;
         
     }
 }
@@ -395,7 +408,6 @@ nav {
         left: 100%;
     }
 }
-
 
 
 /*  back to top button */
@@ -486,7 +498,6 @@ th, td{
     border: 1px solid #000000;
 }
 
-
 th {
     background-color: #ffe81f;
     color: #000000;
@@ -525,7 +536,6 @@ tr:nth-child(even):hover {
     border: 0.25em dashed #424242;
 }
 
-
 @media all and  (max-width: 80em) {
  
     #box-office-ranking {
@@ -536,16 +546,23 @@ tr:nth-child(even):hover {
     table {
         width: 100%;
         table-layout: fixed;
-        font-size: 0.9em;
     }
 
     th, td {
         padding: 0.5rem 1rem;
-        word-wrap: break-word; 
+        font-size: 0.9em; 
     }
 
+    
     .wrap-img img {
         width: 20%;
+    }
+}
+
+@media all and (max-width: 40em) {
+
+    th, td {
+        font-size: 0.5em; 
     }
 }
 
@@ -569,3 +586,9 @@ tr:nth-child(even):hover {
     }
 }
 
+@media all and  (max-width: 20em) {
+
+    table {
+        word-wrap: break-word;
+    }
+}

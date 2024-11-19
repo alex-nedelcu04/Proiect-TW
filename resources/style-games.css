@@ -89,7 +89,7 @@ header {
 
 @media all and (min-width:0em) {
     #sw-logo {
-        width: 30vw;
+        width: 40vw;
     }
 }
 
@@ -180,7 +180,6 @@ nav {
     grid-area: nav;
     font-size: 1.125rem;
     text-transform: uppercase;
-
 }
 
 .dropdown-menu::after {
@@ -204,7 +203,21 @@ nav {
     color: #fff;
     text-wrap: nowrap;
     padding: 15px 20px;
+
 }
+
+@media all and (max-width: 30em) {
+
+    .dropdown-menu ul {
+        font-size: 0.8rem;
+    }
+
+    .dropdown-menu ul li a {
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+}
+
 
 .dropdown-menu ul li:hover a {
     background: #ffe81f;
@@ -245,7 +258,7 @@ nav {
 @media all and  (min-width:20em) {
     .dropdown-menu ul ul ul {
         top: 100%;
-        left: -100%;
+        left: -150%;
         
     }
 }
