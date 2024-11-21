@@ -282,7 +282,7 @@ nav {
 @media all and  (min-width:20em) {
     .dropdown-menu ul ul ul {
         top: 100%;
-        left: -150%;
+        left: -125%;
         
     }
 }
