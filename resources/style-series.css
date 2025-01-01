@@ -467,3 +467,37 @@ p > a, .sidebar a{
 .title-divide {
     border: 0.25em dashed #424242;
 }
+
+@media all and  (min-width: 55em) {
+
+    #search {
+        float: right;
+        padding: 0.375rem;
+        margin-top: 0.5rem;
+        margin-right: 0.375rem;
+        border: #ffe81f solid 0.15em;
+        background-color: #262626;
+        color: white;
+        border-radius: 25px;
+
+    }
+
+}
+
+@media all and  (max-width: 55em) {
+
+    #search {
+        float: left;
+        padding: 0.375rem;
+        margin-top: 0.5rem;
+        margin-right: 0.375rem;
+        margin-left:  2rem;
+        margin-bottom: 0.5rem;
+        border: #ffe81f solid 0.15em;
+        background-color: #262626;
+        color: white;
+        border-radius: 25px;
+
+    }
+
+}
