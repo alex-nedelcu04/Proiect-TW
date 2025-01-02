@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Star Wars Media Guide </title>
+        <meta charset="utf-8">
+        <meta name="author" content = "Nedelcu Alexandru-Constantin">
+        <meta name="description" content="A complete guide designed to help you
+            navigate the vast amount of Star Wars media available and gain a
+            better understanding of what to expect from each movie, series or games">
+        <meta name="keywords" content="Movie Guide, Star Wars, Skywalker, Darth Vader, 
+        Yoda, Force, Dark Side, Mandalorian, Clone Wars, Obi wan Kenobi, Death Star">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="resources/style-sw-form.css" type="text/css">
+        <link rel="icon" href="resources/r2d2.ico" type="image/x-icon">
+        <script type="text/javascript" src="resources/sw-form.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <input type="checkbox" id="logo-click">
+            <label for="logo-click">
+                <img src="resources/pictures/star-wars-logo.png" alt="Star Wars Logo" id="sw-logo">
+            </label>
+        </header>
+
+        <div class="grid-container">
+            <!--navigation menu-->
+            <nav class="dropdown-menu">
+                <ul class = "menu">
+                    <li><a href="main.html">Introduction</a> </li>
+                    <li> 
+                        <a href="movies.html"> Movies </a> 
+                        <ul>
+                            <li>
+                                <a href="movies.html#prequel-trilogy">The Prequel Trilogy</a>
+                                <ul>
+                                    <li><a href="movies.html#episode1">Episode I: The Phantom Menace</a></li>
+                                    <li><a href="movies.html#episode2">Episode II: Attack of the Clones</a></li>
+                                    <li><a href="movies.html#episode3">Episode III: Revenge of the Sith</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="movies.html#original-trilogy">The Original Trilogy</a>
+                                <ul>
+                                    <li><a href="movies.html#episode4">Episode IV: A New Hope</a></li>
+                                    <li><a href="movies.html#episode5">Episode V: The Empire Strikes Back</a> </li>
+                                    <li><a href="movies.html#episode6">Episode VI: Return of the Jedi</a> </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="movies.html#sequel-trilogy">The Sequel Trilogy</a>
+                                <ul>
+                                    <li><a href="movies.html#episode7">Episode VII: The Force Awakens</a></li>
+                                    <li><a href="movies.html#episode8">Episode VIII: The Last Jedi</a></li>
+                                    <li><a href="movies.html#episode9">Episode IX: The Rise of Skywalker</a> </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="movies.html#anthology-movies">Anthology Movies</a>
+                                <ul>
+                                    <li><a href="movies.html#rogue-one">Rogue One: A Star Wars Story</a> </li>
+                                    <li><a href="movies.html#solo">Solo: A Star Wars Story</a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                   <li> 
+                        <a href="series.html"> Disney+ Series </a> 
+                        <ul>
+                            <li><a href="series.html#clone-wars">The Clone Wars</a> </li>
+                            <li><a href="series.html#rebels">Rebels</a> </li>
+                            <li><a href="series.html#the-mandalorian">The Mandalorian </a> </li>
+                            <li><a href="series.html#bad-batch">The Bad Batch </a> </li>
+                            <li><a href="series.html#book-of-boba-fett">The Book of Boba Fett </a> </li>
+                            <li><a href="series.html#kenobi">Obi-Wan Kenobi </a> </li>
+                            <li><a href="series.html#andor">Andor</a> </li>
+                            <li><a href="series.html#ahsoka">Ahsoka</a> </li>
+                            <li><a href="series.html#the-acolyte">The Acolyte</a> </li>
+
+                        </ul>
+                    </li> 
+                    <li>  
+                        <a href="games.html"> Games </a> 
+                        <ul>
+                            <li><a href="games.html#fallen-order">Jedi: Fallen Order</a> </li>
+                            <li><a href="games.html#survivor"> Jedi: Surivor </a> </li>
+                            <li><a href="games.html#battlefront">Battlefront I & II </a> </li>
+                            <li><a href="games.html#outlaws">Star Wars Outlaws</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="sw-form.html"> Galaxy's Choice </a></li> 
+                </ul>   
+                <input type="text"  name="search" id="search" placeholder="Search..." />
+            </nav>
+
+            <main>
+                <section id="introduction">
+
+                    <div class="intro-container">
+                        <div class="introduction-title">
+                            <h1 id="intro-h1">Galaxy's Choice</h1>
+                        </div>
+                    </div>
+                    <p> We're excited to learn more about the Star Wars preferences of 
+                        our readers, so we're offering you this quiz! Not only will it 
+                        help us better understand our audience, but it also serves as a 
+                        fun and engaging exercise for you.
+                    </p>
+                    <p>
+                        As a bonus, everyone who completes the quiz will automatically be 
+                        entered into a contest. The prize? Star Wars merchandise of your choice 
+                        and exclusive early tickets to Hayden Christensen's meet-and-greet at 
+                        the upcoming Star Wars Celebration event.
+                    </p>
+
+                </section>
+                
+                <!--formular-->
+                <div id="form-container" target="_self" method="post" action="Earth"> 
+                    <form>
+                        <fieldset>
+                            <legend>Personal information</legend>
+                            <div>
+                                <label for="full-name">Full name:</label>
+                                <input type="text" id="full-name" name="full-name" minlength="3" maxlength="30" required />
+                            </div>
+
+                            <div>
+                                <label for="birthday">Date of birth:</label>
+                                <input type="date" id="birthday" name="birthday" min="1900-05-04" max="2030-05-04" value="2005-05-04" required />
+                            </div>
+
+                            <div>
+                                <label for="country">Country:</label>
+                                <input type="text" id="country" name="country" required />
+
+                            <div>
+                                <label for="country">City:</label>
+                                <input type="text" id="city" name="city" required/>
+                            </div> 
+
+                            <div>
+                                <label for="address">Address (Street, ap., etc.):</label>
+                                <input type="text" id="address" name="address" required/>
+                            </div> 
+
+                            <div>
+                                <label for="email">Email address:</label>
+                                <input type="text" id="email" name="email" required pattern="([a-zA-Z0-9.\-_]+)@([a-z0-9]+)(.[a-zA-Z]{2,3})+"/>
+                            </div> 
+                            <div>
+                                <label for="phone-num">Phone number:</label>
+                                <input type="text" id="phone-num" name="phone-num" required pattern="[0-9]{10}"/>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>General questions</legend>
+                            <div>
+                                <label for="fav-skywalker">1. Who is your favorite Star Wars character?</label>
+                                <select id="fav-skywalker", name="fav-skywalker" required>
+                                    <option value="">---Please enter an option---</option>
+                                    <option value="Ahsoka">Ahsoka Tano</option>
+                                    <option value="Anakin">Anakin Skywalker</option>
+                                    <option value="Ben">Ben Solo (Kylo Ren)</option>
+                                    <option value="BobaFett">Boba Fett</option>
+                                    <option value="C3PO">C-3PO</option>
+                                    <option value="Chewbacca">Chewbacca</option>
+                                    <option value="Chopper">Chopper (C1-10P)</option>
+                                    <option value="DarthMaul">Darth Maul</option>
+                                    <option value="DarthVader">Darth Vader</option>
+                                    <option value="Ezra">Ezra Bridger</option>
+                                    <option value="Finn">Finn</option>
+                                    <option value="Thrawn">Grand Admiral Thrawn</option>
+                                    <option value="Grogu">Grogu (Baby Yoda)</option>
+                                    <option value="Han">Han Solo</option>
+                                    <option value="Hera">Hera Syndulla</option>
+                                    <option value="Jabba">Jabba the Hutt</option>
+                                    <option value="Kanan">Kanan Jarrus</option>
+                                    <option value="Lando">Lando Calrissian</option>
+                                    <option value="Leia">Leia Organa</option>
+                                    <option value="Luke">Luke Skywalker</option>
+                                    <option value="MaceWindu">Mace Windu</option>
+                                    <option value="ObiWan">Obi-Wan Kenobi</option>
+                                    <option value="Padme">PadmÃ© Amidala</option>
+                                    <option value="Palpatine">Palpatine (Emperor)</option>
+                                    <option value="Poe">Poe Dameron</option>
+                                    <option value="QuiGon">Qui-Gon Jinn</option>
+                                    <option value="R2D2">R2-D2</option>
+                                    <option value="Rey">Rey Skywalker</option>
+                                    <option value="Sabine">Sabine Wren</option>
+                                    <option value="Yoda">Yoda</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                
+                            </div>
+
+                            <div>
+                                <label for="other-character">If you chose other, please enter the character's name here: </label>
+                                <input type="text" id="other-character" name="other-character" />
+                            </div> 
+
+                            <div>
+                                <label for="fav-movie">2. What is your favorite Star Wars movie?</label>
+                                <select id="fav-movie", name="fav-movie" required>
+                                    <option value="">---Please enter an option---</option>
+                                    <option value="TPM">The Phantom Menace</option>
+                                    <option value="AOTC">Attack of the Clones</option>
+                                    <option value="ROTS">Revenge of the Sith</option>
+                                    <option value="ANH">A New Hope</option>
+                                    <option value="ESB">The Empire Strikes Back</option>
+                                    <option value="ROTJ">Return of the Jedi</option>
+                                    <option value="TFA">The Force Awakens</option>
+                                    <option value="TLJ">The Last Jedi</option>
+                                    <option value="TROS">The Rise of Skywalker</option>
+                                    <option value="RogueOne">Rogue One</option>
+                                    <option value="Solo">Solo</option>
+                                    
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="fav-series">3. What is your favorite Star Wars series?</label>
+                                <select id="fav-series", name="fav-series" required>
+                                    <option value="">---Please enter an option---</option>
+                                    
+                                    <option value="TheCloneWars">The Clone Wars</option>
+                                    <option value="Rebels">Rebels</option>
+                                    <option value="TheMandalorian">The Mandalorian</option>
+                                    <option value="TheBadBatch">The Bad Batch</option>
+                                    <option value="TheMandalorian">The Book of Boba Fett</option>
+                                    <option value="ObiWanKenobi">Obi-Wan Kenobi</option>
+                                    <option value="Andor">Andor</option>
+                                    <option value="Ahsoka">Ahsoka</option>
+                                    <option value="TheAcolyte">The Acolyte</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="fav-trilogy">4. What is your favorite trilogy?</label>
+                                <select id="fav-trilogy", name="fav-trilogy" required>
+                                    <option value="">---Please enter an option---</option>
+                                    
+                                    <option value="ThePrequelTrilogy">The Prequel Trilogy</option>
+                                    <option value="TheOriginalTrilogy">The Original Trilogy</option>
+                                    <option value="TheSequelTrilogy">The Sequel Trilogy</option>
+                
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="fav-era">5. What is your favorite Star Wars era?</label>
+                                <select id="fav-era", name="fav-era" required>
+                                    <option value="">---Please enter an option---</option>
+                                    
+                                    <option value="TheHighRepublicEra">The High Republic Era</option>
+                                    <option value="TheRepublicEra">The Republic Era</option>
+                                    <option value="TheEmpireEra">The Empire Era</option>
+                                    <option value="TheNewRepublicEra">The New Republic Era</option>
+                
+                                </select>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Hypotheticals and other preferences</legend>
+                            <div>
+                                <label for="force_choice">1. If you could choose, which Force-wielding group would you align with?</label>
+                                <br>
+                                <input type="checkbox" name="group_choice" id="Jedi" value="Jedi">
+                                <label for="force_choice">Jedi</label>
+                                <br>
+                                <input type="checkbox" name="group_choice" id="Sith" value="Sith" checked>
+                                <label for="force_choice">Sith</label>
+                                <br>
+                                <input type="checkbox" name="group_choice" id="DarkJedi" value="DarkJedi">
+                                <label for="force_choice">Dark Jedi</label>
+                                <br>
+                                <input type="checkbox" name="group_choice" id="GreyJedi" value="GreyJedi">
+                                <label for="force_choice">Grey Jedi</label>
+                                <br>
+                                <input type="checkbox" name="group_choice" id="TheInquisitorius" value="TheInquisitorius">
+                                <label for="force_choice">The Inquisitorius</label>
+                                <br>
+                                <input type="checkbox" name="group_choice" id="WitchesOfDathomir" value="WitchesOfDathomir">
+                                <label for="force_choice">Witches of Dathomir</label>
+                                <br>
+                                <input type="checkbox" name="group_choice" id="None" value="None">
+                                <label for="force_choice">None</label>
+                            </div>
+
+                            <div>
+                                <label for="planet_choice">2. If you could live on any Star Wars planet, which one would it be?</label>
+                                <select id="planet_choice", name="planet_choice" required>
+                                    <option value="">---Please enter an option---</option>
+                                    <option value="Alderaan">Alderaan</option>
+                                    <option value="Coruscant">Coruscant</option>
+                                    <option value="Dathomir">Dathomir</option>
+                                    <option value="Felucia">Felucia</option>
+                                    <option value="HosnianPrime">Hosnian Prime</option>
+                                    <option value="Hoth">Hoth</option>
+                                    <option value="Kashyyyk">Kashyyyk</option>
+                                    <option value="Mandalore">Mandalore</option>
+                                    <option value="Mustafar">Mustafar</option>
+                                    <option value="Naboo">Naboo</option>
+                                    <option value="Tatooine">Tatooine</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="other-planet">If you chose other, please enter the planet's name here: </label>
+                                <input type="text" id="other-planet" name="other-planet" />
+                            </div>
+
+                            <div>
+                                <label for="color_choice">3. What color would your lightsaber be?</label>
+                                <select id="color_choice", name="color_choice" required>
+                                    <option value="">---Please enter an option---</option>
+                                    
+                                    <option value="Blue">Blue</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Red">Red</option>
+                                    <option value="Purple">Purple</option>
+                                    <option value="White">White</option>
+                                    <option value="Yellow">Yellow</option>
+                                    <option value="Other">Other</option>
+                
+                                </select>
+                            </div>
+                            <div>
+                                <label for="other-color">If you chose other, please enter the color here: </label>
+                                <input type="text" id="other-color" name="other-color" />
+                            </div>
+
+                            <div>
+                                <label for="species_choice">4. What is you favorite  Star Wars species?</label>
+                                <select id="species_choice", name="species_choice" required>
+                                    <option value="">---Please enter an option---</option>
+                                    
+                                    <option value="Mandalorians">Mandalorians</option>
+                                    <option value="Wookiees">Wookiees</option>
+                                    <option value="Ewoks">Ewoks</option>
+                                    <option value="Jawas">Jawas</option>
+                                    <option value="Togruta">Togruta</option>
+                                    <option value="MonCalamari">Mon Calamari</option>
+                                    <option value="Twi'lek">Twi'leks</option>
+                                    <option value="Other">Other</option>
+                
+                                </select>
+                            </div>
+                            <div>
+                                <label for="other-color">If you chose other, please enter the species' name here: </label>
+                                <input type="text" id="other-color" name="other-color" />
+                            </div>
+
+                            <div>
+                                <label for="ch-for-a-day">5. If you could be any Star Wars character for a day, who would it be and why?</label>
+                                <textarea type="text" id="ch-for-a-day" name="ch-for-a-day" rows="4" cols="20" required></textarea>
+                            </div>
+
+                            <div>
+                                <label for="underrated">5. Who is the most underrated Star Wars character in your opinion? Explain you choice: </label>
+                                <textarea type="text" id="underrated" name="underrated" rows="4" cols="80" required></textarea>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Past Star Wars Experience</legend>
+                            <div>
+                                <label for="sw-introduction">1. How did you first get introduced to Star Wars?</label>
+                                <select id="sw-introduction", name="sw-introduction" required>
+                                    <option value="">---Please enter an option---</option>
+             
+                                    <option value="Books">Books</option>
+                                    <option value="Games">Games</option>
+                                    <option value="Movies">Movies</option>
+                                    <option value="Series">Series</option>
+                                    <option value="SocialMedia">Social Media</option>
+                                    <option value="Suggestions">Suggestions from friends/family</option>
+                
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="most-consumed">2. What Star Wars content do you consume the most?</label>
+                                <select id="most-consumed", name="mosst-consumed" required>
+                                    <option value="">---Please enter an option---</option>
+             
+                                    <option value="Books-most">Books</option>
+                                    <option value="Games-most">Games</option>
+                                    <option value="Movies-most">Movies</option>
+                                    <option value="Series-most">Series</option>
+                                    <option value="FanMade-most">Fan-made</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="merch">3. If you could choose, which Force-wielding group would you align with?</label>
+                                <br>
+                                <input type="checkbox" name="merch-choice" id="YesMerch" value="YesMerch">
+                                <label for="merch">Yes</label>
+                                <input type="checkbox" name="merch-choice" id="NoMerch" value="NoMerch">
+                                <label for="merch">No</label>
+                            
+                               
+                            </div>
+
+                            <div>
+                                <label for="fan-event">4. Have you ever attended a Star Wars fan event?</label>
+                                <br>
+                                <input type="checkbox" name="fan-event-choice" id="YesFanEvent" value="YesFanEvent">
+                                <label for="fan-event">Yes</label>
+                                <input type="checkbox" name="fan-event-choice" id="NoFanEvent" value="NoFanEvent">
+                                <label for="fan-event">No</label>
+                                <input type="checkbox" name="fan-event-choice" id="YesPlanningTo" value="NoPlanningTo">
+                                <label for="fan-event">Planning To</label>
+                            
+                               
+                            </div>
+
+                            <div>
+                                <label for="fandom">5. Are you part of any Star Wars fandom groups or communities?</label>
+                                <br>
+                                <input type="checkbox" name="fandom-choice" id="YesFandom" value="YesFandom">
+                                <label for="fandom">Yes</label>
+                                <input type="checkbox" name="fandom-choice" id="NoFandom" value="NoFandom">
+                                <label for="fandom">No</label>
+                            
+                               
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Extra points</legend>
+                            <div>
+                                <label for="why-do-you-deserve">(Optional) 1. Tell us why you believe you deserve to win:</label>
+                                <textarea type="text" id="why-do-you-deserve" name="why-do-you-deserve" rows="8" cols="100" ></textarea>
+                            </div>
+
+                            <div>
+                                <label for="fan-art">(Optional) 2. Your Star Wars-inspired fan art:</label>
+                                <br>
+                                <input type="file" id="fan-art" name="fan-art" accept="image/*" />
+                            </div>
+                        </fieldset>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </main>
+            
+            <footer>Created by Nedelcu Alexandru-Constantin (FMI - 141)</footer>
+        </div>
+        <a href="#" class="back-to-top"> 
+            <img src="resources/pictures/xwing.png" alt="xwing" id="xwing-button">
+        </a>
+    </body>
+</html>

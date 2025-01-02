@@ -6,7 +6,7 @@ body {
 }
 
 @media all and (max-width:80em) {
-    .grid-container {
+    #grid-container {
         display: grid;
         height: 100vh;
         grid-template-columns: 1fr;
@@ -89,7 +89,7 @@ body {
 }
 
 @media all and (min-width:80em) {
-    .grid-container {
+    #grid-container {
         display: grid;
         height: 100vh;
         grid-template-columns: 3.25fr 0.75fr;
@@ -117,7 +117,7 @@ body {
     
 }
 
-.grid-container {
+#grid-container {
     animation: transition-load-page 1s;
 }
 
@@ -260,7 +260,7 @@ footer {
     padding: 1%;
 }
 
-.sidebar {
+#sidebar {
     border-radius: 25px;
     background-color: #000000;
     border: #ffe81f solid 0.15em;
@@ -521,7 +521,7 @@ html {
 
 /* sidebar */
 
-p > a, .sidebar a{
+p > a, #sidebar a{
     color:#ffe81f;
     font-style:italic;
 }
@@ -537,7 +537,7 @@ p > a, .sidebar a{
     color: #ffe81f;
     font-weight: bold
 }
-.sidebar ul li {
+#sidebar ul li {
     margin-bottom: 5%;
     font-size: 1.25em;
 }
@@ -657,7 +657,7 @@ tr:nth-child(even):hover {
     }
 }
 
-@media all and  (min-width: 55em) {
+@media all and  (min-width: 70em) {
 
     #search {
         float: right;
@@ -673,7 +673,7 @@ tr:nth-child(even):hover {
 
 }
 
-@media all and  (max-width: 55em) {
+@media all and  (max-width: 70em) {
 
     #search {
         float: left;
@@ -689,4 +689,40 @@ tr:nth-child(even):hover {
 
     }
 
+}
+
+#sidebar-close-container {
+    display: flex;
+    justify-content: center;
+}
+
+#sidebar-close {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: #ffe81f solid 0.15em;
+    border-radius: 25px;
+    padding: 0.2em;
+    margin-top: 0.5em;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+
+#close-x {
+    width: 15%;
+    height: auto;
+    cursor: pointer;
+}
+
+@media all and (max-width: 70em) {
+    #close-x {
+        width: 8%;
+    }
+}
+
+@media all and (max-width: 25em) {
+    #close-x {
+        width: 12%;
+    }
 }

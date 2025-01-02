@@ -355,191 +355,6 @@ html {
 }
 
 
-/* lightsaber */
-:root {
-    --blade-hue: 195;
-
-}
-
-
-
-.lightsaber-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows:  1fr;
-    place-items: center;
-    text-transform: uppercase;
-   
-}
-
-[name=color] {
-    grid-row: 1/2;
-    align-self: end;
-    margin: 0.5em;
-}
-
-label:not(.hilt) {
-    color: white;
-    font-weight: bold;
-    align-self: start;
-}
-
-@media all and  (max-width: 30em) {
-    label:not(.hilt) {
-       font-size: 0.5em;
-    }
-    
-}
-.lightsaber {
-    margin-top: 25em;
-    grid-column: 1/-1;
-    position: relative;
-    
-}
-
-
-#on-off {
-    position: absolute;
-    width: 0;
-    height: 0;
-    cursor: pointer;
-
-}
-
-.hilt {
-    display: block;
-    width: .75rem;
-    height: 7rem;
-    background-color: red;
-    border-radius: 0 0 4px 4px;
-    background-image: linear-gradient(
-        silver 0 10px,
-        rgb(58, 57, 57) 0 14px,
-        silver 0 15px,
-        #424242 0 20px,
-        silver 0 22px,
-        #424242 0 25px,
-        silver 0 27px,
-        #424242 0 30px,
-        silver 0 32px,
-        #424242 0 35px,
-        silver 0 37px,
-        #424242 0 40px,
-        silver 0 42px,
-        #424242 0 45px,
-        silver 0 47px,
-        #424242 0 50px,
-        silver 0 60px,
-        #424242 60px 80px,
-        silver 0 100%
-    );
-}
-
-.blade {
-    position: absolute;
-    background: white;
-    height: 350%;
-    width: 100%;
-    bottom: 100%;
-    border-radius: 100vw 100vw 0 0;
-    box-shadow: 
-        0 0 1em hsl(var(--blade-hue) 100% 50% / .8),
-        0 0 1.5em hsl(var(--blade-hue) 100% 50% / .75),
-        0 0 2em hsl(var(--blade-hue) 100% 50% / .5),
-        0 0 3em hsl(var(--blade-hue) 100% 50% / .3),
-        0 0 5em hsl(var(--blade-hue) 100% 50% / .2);
-
-    transition: transform 90ms ease-out;
-    transform-origin: bottom;
-}
-
-.blade::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: hsl(var(--blade-hue) 100% 50%);
-    border-radius: inherit;
-    filter:blur(.5em);
-    opacity: 1;
-    animation: pulse linear 1.5s infinite;
-   
-}
-
-.blade::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
-    border-radius: inherit;
-    z-index: 10;
-}
-
-@keyframes pulse {
-    50% {
-        opacity: .5;
-    }
-}
-
-/* on/off */
-#on-off:not(:checked) + .blade {
-    transform: scaleY(0);
-}
-
-#on-off:checked + .blade {
-    transform: scaleY(1);
-}
-
-#blue:checked ~ .lightsaber{
-    --blade-hue: 195;
-}
-
-
-#green:checked ~ .lightsaber{
-    --blade-hue: 120;
-}
-
-#yellow:checked ~ .lightsaber{
-    --blade-hue: 60;
-}
-
-#purple:checked ~ .lightsaber{
-    --blade-hue: 290;
-}
-
-#red:checked ~ .lightsaber{
-    --blade-hue: 360;
-}
-
-@keyframes cycle-colors {
-    0% { filter: hue-rotate(0deg);}
-    20% { filter: hue-rotate(60deg); }
-    40% { filter: hue-rotate(120deg); }
-    60% { filter: hue-rotate(180deg); }
-    80% { filter: hue-rotate(240deg); }
-    100% { filter: hue-rotate(360deg); }
-}
-
-#cycle:checked ~ .lightsaber{
-    animation: cycle-colors linear 5s infinite;
-}
-
-/* imaginii responsive */
-
-#release-order-pic {
-    width: 20%;
-    transition: transform 0.2s ease;
-}
-
-#chrono-order-pic {
-    width: 40%;
-    transition: transform 0.2s ease;
-}
 
 @media all and  (max-width: 35em) {
 
@@ -596,3 +411,34 @@ label:not(.hilt) {
 
 }
 
+fieldset {
+    border-color: #ffe81f;
+    border-style: solid;
+    border-radius: 25px;
+    margin-bottom: 1.25rem;
+}
+
+#form-container {
+    margin: 0.75rem;
+    padding: 0.625rem;
+    width: 80%;
+  }
+  
+fieldset label, fieldset input {
+    margin-bottom: 1.25rem; 
+}
+
+input[type=submit] {
+    background-color: #000000;
+    color: white;
+    border-radius: 25px;
+    border: #ffe81f solid 0.15em;
+    cursor: pointer;
+    margin-left: 0.75rem;
+}
+
+@media all and  (max-width: 80em) {
+    textarea {
+        width: 100%; 
+    }
+}

@@ -53,7 +53,9 @@ const mediaId = {
     "battlefront": "games.html#battlefront",
     "battlefront i": "games.html#battlefront",
     "battlefront ii": "games.html#battlefront",
-    "outlaws": "games.html#outlaws"
+    "outlaws": "games.html#outlaws",
+    "galaxy's choice": "sw-form.html",
+    "form": "sw-form.html"
 
 }
 

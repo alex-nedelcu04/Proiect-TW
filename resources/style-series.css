@@ -468,7 +468,7 @@ p > a, .sidebar a{
     border: 0.25em dashed #424242;
 }
 
-@media all and  (min-width: 55em) {
+@media all and  (min-width: 70em) {
 
     #search {
         float: right;
@@ -484,7 +484,7 @@ p > a, .sidebar a{
 
 }
 
-@media all and  (max-width: 55em) {
+@media all and  (max-width: 70em) {
 
     #search {
         float: left;

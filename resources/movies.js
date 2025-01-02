@@ -53,7 +53,9 @@ const mediaId = {
     "battlefront": "games.html#battlefront",
     "battlefront i": "games.html#battlefront",
     "battlefront ii": "games.html#battlefront",
-    "outlaws": "games.html#outlaws"
+    "outlaws": "games.html#outlaws",
+    "galaxy's choice": "sw-form.html",
+    "form": "sw-form.html"
 
 }
 
@@ -69,7 +71,22 @@ function KeypressListenerSearch(event) {
     }
 }
 
+
+function DeleteSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    sidebar.innerHTML='';
+
+    // schimbare grid
+
+    var grid_container = document.getElementById("grid-container");
+    grid_container.style.gridTemplateRows = "0.2fr 1fr 1fr 0.2fr";
+    grid_container.style.gridTemplateAreas = '"nav" ' + '"main" ' + '"footer"';
+
+}
+
 window.onload = function() {
     const search = document.getElementById("search");
     search.addEventListener('keypress', KeypressListenerSearch);
+    delete_sidebar = document.getElementById("close-x");
+    delete_sidebar.addEventListener('click', DeleteSidebar);
 }
