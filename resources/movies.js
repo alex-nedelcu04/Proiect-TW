@@ -75,18 +75,68 @@ function KeypressListenerSearch(event) {
 function DeleteSidebar() {
     var sidebar = document.getElementById("sidebar");
     sidebar.innerHTML='';
+    sidebar.remove();
 
     // schimbare grid
 
     var grid_container = document.getElementById("grid-container");
-    grid_container.style.gridTemplateRows = "0.2fr 1fr 1fr 0.2fr";
+    grid_container.style.gridTemplateColumns =  "1fr";
+    grid_container.style.gridTemplateRows =  "0.2fr 1.8fr 0.2fr";
     grid_container.style.gridTemplateAreas = '"nav" ' + '"main" ' + '"footer"';
+   
+
 
 }
+
+function AddOpenNotesButton() {
+
+    const open_container = document.createElement("div");
+    open_container.id = "open-container";
+
+    const open = document.createElement('div');
+    open.id = "open";
+    
+    const header = document.createElement('h5');
+    header.textContent = "OPEN NOTES";
+
+    const open_icon =  document.createElement("img");
+    open_icon.src = "resources/open.svg";
+    open_icon.alt="Open icon";
+    open_icon.id = "open-notes";
+
+    open.append(header);
+    open.append(open_icon);
+
+    open_container.append(open);
+
+    const sidebar = document.getElementById("sidebar");
+
+    const prequel_cast = document.getElementById("prequel-cast");
+
+    sidebar.insertBefore(open_container, prequel_cast);
+    
+
+}
+
+function DeleteNotes() {
+    var notes = document.getElementById("notes-container");
+    notes.innerHTML='';
+    notes.remove();
+
+    AddOpenNotesButton();
+}
+
 
 window.onload = function() {
     const search = document.getElementById("search");
     search.addEventListener('keypress', KeypressListenerSearch);
-    delete_sidebar = document.getElementById("close-x");
+
+    const delete_sidebar = document.getElementById("close-x-sidebar");
     delete_sidebar.addEventListener('click', DeleteSidebar);
+
+    const delete_notes = document.getElementById("close-x-notes");
+    delete_notes.addEventListener('click', DeleteNotes);
+
+
 }
+

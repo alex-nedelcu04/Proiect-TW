@@ -334,7 +334,7 @@ h1 {
     font-size: 2.5em;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
     color:#ffe81f;
     text-shadow:  2px 2px #000000;
 }
@@ -691,12 +691,12 @@ tr:nth-child(even):hover {
 
 }
 
-#sidebar-close-container {
+.close-container {
     display: flex;
     justify-content: center;
 }
 
-#sidebar-close {
+.close {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -709,20 +709,72 @@ tr:nth-child(even):hover {
 }
 
 
-#close-x {
+#close-x-sidebar,  #close-x-notes {
     width: 15%;
     height: auto;
     cursor: pointer;
 }
 
 @media all and (max-width: 70em) {
-    #close-x {
+    #close-x-sidebar,  #close-x-notes {
         width: 8%;
     }
 }
 
 @media all and (max-width: 25em) {
-    #close-x {
+    #close-x-sidebar,  #close-x-notes {
         width: 12%;
+    }
+}
+
+#notes-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: #ffe81f solid 0.15em;
+    border-radius: 25px;
+    padding: 0.6em;
+    margin-top: 0.5em;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+textarea {
+    background-color: #262626;
+    color:white;
+}
+
+#open-container {
+    display: flex;
+    justify-content: center;
+}
+
+#open {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: #ffe81f solid 0.15em;
+    border-radius: 25px;
+    padding: 0.2em;
+    margin-top: 0.5em;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+ #open-notes {
+    width: 12%;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+@media all and (max-width: 70em) {
+    #close-x-sidebar,  #close-x-notes {
+        width: 6%;
+    }
+}
+
+@media all and (max-width: 25em) {
+    #close-x-sidebar,  #close-x-notes {
+        width: 10%;
     }
 }
