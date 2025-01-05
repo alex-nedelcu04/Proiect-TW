@@ -501,3 +501,24 @@ p > a, .sidebar a{
     }
 
 }
+
+#change-color {
+    display: block;
+    margin-bottom: 0.65rem;
+    margin-right: 0.4rem;
+    text-align: right;
+}
+
+#change-color label {
+    color:#ffe81f;
+    text-transform: uppercase;
+}
+
+#main-style-color {
+    background-color: #1d1c1c;
+}
+
+#random-color-button, #default-color-button{
+    background-color: #424242;
+    color:#ffe81f;
+}

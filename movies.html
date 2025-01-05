@@ -21,6 +21,14 @@
                 <img src="resources/pictures/star-wars-logo.png" alt="Star Wars Logo" id="sw-logo">
             </label>
         </header>
+
+        <div id="change-color">
+            <label for="main-style-color">Style Color:</label>
+            <input type="color" id="main-style-color" name="main-style-color" value="#ffe81f" />
+            <input type="button" id="random-color-button" value="Random">
+            <input type="button" id="default-color-button" value="Default">
+        </div>
+
         <div id="grid-container">
             <!--navigation menu-->
             <nav class="dropdown-menu">
@@ -149,6 +157,36 @@
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/bD7bpG-zDJQ?si=a92sb99r9foxbpDf" title="YouTube video player" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </section>
+
+                        <section class="review">
+                            <h3>Leave us your review of the movie: </h3>
+                            
+                            <div class="review-container">
+                                <svg class="star" xmlns = "http://www.w3.org/2000/svg">
+                                    <polygon id="star1" points="50,5 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35" />
+                                </svg>
+            
+                                <svg class="star" xmlns = "http://www.w3.org/2000/svg">
+                                    <polygon id="star2" points="50,5 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35" />
+                                </svg>
+
+                                <svg class="star" xmlns = "http://www.w3.org/2000/svg">
+                                    <polygon id="star3" points="50,5 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35" />
+                                </svg>
+
+                                <svg class="star" xmlns = "http://www.w3.org/2000/svg">
+                                    <polygon id="star4" points="50,5 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35" />
+                                </svg>
+
+                                <svg class="star" xmlns = "http://www.w3.org/2000/svg">
+                                    <polygon id="star5" points="50,5 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35" />
+                                </svg>
+                                
+                                <p id="rating-value">You rated the movie: 0/5★ </p>
+                                
+                            </div>
+                            
                         </section>
                     </section>
 
@@ -1005,7 +1043,7 @@
 
             </div>
 
-            <footer>Created by Nedelcu Alexandru-Constantin (FMI - 141)</footer>
+            <footer id="footer">Created by Nedelcu Alexandru-Constantin (FMI - 141)</footer>
             
         </div>
         <a href="#" class="back-to-top"> 

@@ -59,7 +59,7 @@ const mediaId = {
 
 }
 
-function KeypressListenerSearch(event) {
+function keypressListenerSearch(event) {
     if (event.keyCode === 13) {
         const searched_value = event.target.value.toLowerCase();
         if (mediaId[searched_value]) {
@@ -71,9 +71,124 @@ function KeypressListenerSearch(event) {
     }
 }
 
+// Change color
 
-function DeleteSidebar() {
+function changeColor(old_color, new_color) {
+
+    const all_elem = document.querySelectorAll("*");
+    all_elem.forEach((crt) => {
+    
+        let computed_style = window.getComputedStyle(crt);
+
+        let crt_color = computed_style.color;
+        if (crt_color === old_color) {
+            crt.style.color = new_color;
+        }
+
+        let crt_bg_color = computed_style.backgroundColor;
+        if (crt_bg_color === old_color) {
+            crt.style.backgroundColor = new_color;
+        }
+
+        let crt_bg = computed_style.background;
+        if (crt_bg_color === old_color) {
+            crt.style.background = new_color;
+        }
+
+        let crt_border_color = computed_style.borderColor;
+        if (crt_border_color === old_color) {
+            crt.style.borderColor = new_color;
+        }
+    });
+
+}
+
+function populateStorage() {
+    var old_color = localStorage.getItem("main-style-color");
+    if (old_color) {
+        localStorage.setItem("main-style-old-color", old_color);
+    }
+    localStorage.setItem("main-style-color", document.getElementById("main-style-color").value);
+    setStyle();
+    }
+
+    function hex2rgb(hex) {
+    let r = parseInt(hex.slice(1, 3), 16);
+    let g = parseInt(hex.slice(3, 5), 16);
+    let b = parseInt(hex.slice(5, 7), 16);
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+function setStyle() {
+    let new_color = localStorage.getItem("main-style-color");
+    document.getElementById("main-style-color").value = new_color;
+
+    let old_color = localStorage.getItem("main-style-old-color");
+
+
+    changeColor(hex2rgb(old_color), hex2rgb(new_color));
+    }
+
+    function randomColor() {
+    const hex_characters = '0123456789ABCDEF';
+    let result = '';
+    for (let i = 0; i < 6; i++) {
+        result += hex_characters.charAt(Math.floor(Math.random() * 16));
+    }
+    return "#"+ result;
+
+}
+
+
+function changeToRandomColor() {
+    // populateStorage
+
+    var old_color = localStorage.getItem("main-style-color");
+    if (old_color) {
+        localStorage.setItem("main-style-old-color", old_color);
+    }
+
+    localStorage.setItem("main-style-color", randomColor());
+
+    // setStyle
+
+    let new_color = localStorage.getItem("main-style-color");
+    document.getElementById("main-style-color").value = new_color;
+
+    old_color = localStorage.getItem("main-style-old-color");
+
+
+    changeColor(hex2rgb(old_color), hex2rgb(new_color));
+}
+
+function changeToDefaultColor() {
+// populateStorage
+
+    var old_color = localStorage.getItem("main-style-color");
+    if (old_color) {
+        localStorage.setItem("main-style-old-color", old_color);
+    }
+
+    localStorage.setItem("main-style-color", "#ffe81f");
+
+    // setStyle
+
+    let new_color = localStorage.getItem("main-style-color");
+    document.getElementById("main-style-color").value = new_color;
+
+    old_color = localStorage.getItem("main-style-old-color");
+
+    changeColor(hex2rgb(old_color), hex2rgb(new_color));
+}
+
+
+// Delete sidebar
+
+function deleteSidebar() {
     var sidebar = document.getElementById("sidebar");
+    localStorage.setItem("sidebar-saved", sidebar.innerHTML);
+    localStorage.setItem("style-sidebar-saved", sidebar.getAttribute("style"));
     sidebar.innerHTML='';
     sidebar.remove();
 
@@ -84,12 +199,13 @@ function DeleteSidebar() {
     grid_container.style.gridTemplateRows =  "0.2fr 1.8fr 0.2fr";
     grid_container.style.gridTemplateAreas = '"nav" ' + '"main" ' + '"footer"';
    
-
-
 }
 
-function AddOpenNotesButton() {
 
+
+function addOpenNotesButton() {
+
+    // HTML    
     const open_container = document.createElement("div");
     open_container.id = "open-container";
 
@@ -114,29 +230,190 @@ function AddOpenNotesButton() {
     const prequel_cast = document.getElementById("prequel-cast");
 
     sidebar.insertBefore(open_container, prequel_cast);
+
+    // CSS 
+    open_container.style.display = "flex";
+    open_container.style.justifyContent= "center";
+
+    open.style.display = "inline-flex";
+    open.style.justifyContent = "center";
+    open.style.alignItems = "center";
+    open.style.border = "#ffe81f solid 0.15em";
+    open.style.borderRadius = "25px";
+    open.style.padding = "0.2em";
+    open.style.marginTop = "0.5em";
+    open.style.marginLeft = "0.6em";
+    open.style.marginRight = "0.6em";
+
+    open_icon.style.width = "12%";
+    open_icon.style.height = "auto";
+    open_icon.style.cursor = "pointer";
+    open_icon.style.marginBottom = "0.5rem";
+
     
+    const reopen_notes = document.getElementById("open-notes");
 
+    reopen_notes.addEventListener('click',  function() 
+                                    { setTimeout(function() {
+                                        setTimeout(reopenNotes, 600);
+                                        });
+                                    });
 }
 
-function DeleteNotes() {
-    var notes = document.getElementById("notes-container");
-    notes.innerHTML='';
-    notes.remove();
 
-    AddOpenNotesButton();
+
+function deleteNotes() {
+
+    var notes_container = document.getElementById("notes-container");
+    localStorage.setItem("notes-saved", notes_container.innerHTML);
+    notes_container.innerHTML='';
+    notes_container.remove();
+
+    setTimeout(addOpenNotesButton, 700);
 }
 
+function reopenNotes() {
+
+    const notes_container = document.createElement('div');
+    notes_container.id = "notes-container";
+
+    const notes_saved = localStorage.getItem("notes-saved");
+
+    if (notes_saved) {
+
+        // adaugare Notes
+
+        notes_container.innerHTML = notes_saved;
+
+        const sidebar = document.getElementById("sidebar");
+
+        const prequel_cast = document.getElementById("prequel-cast");
+
+        sidebar.insertBefore(notes_container, prequel_cast);   
+
+        // Stergere Open Notes
+
+        const open_container = document.getElementById('open-container');
+        open_container.innerHTML = '';
+        open_container.remove();
+
+        // readaugare event listener
+        const delete_notes = document.getElementById("close-x-notes");
+        if (delete_notes) {
+            delete_notes.addEventListener('click', deleteNotes);
+        }
+
+        // Recuperare text din Notes
+
+        const notes_text = document.getElementById("notes");
+        const saved_text = localStorage.getItem("notes-text");
+    
+        if (saved_text) {
+            notes_text.value = saved_text;
+        }
+        
+        notes_text.addEventListener("input", function() {localStorage.setItem("notes-text", notes_text.value);});
+
+    } 
+
+}
+// Star Ratings
+
+if (!localStorage.getItem("rating"))
+    localStorage.setItem("rating", 0);
+
+function rating_change(n) {
+
+    let rating = Number(localStorage.getItem("rating"));
+    localStorage.setItem("rating", n);
+    console.log(localStorage.getItem("rating"));
+    
+    // modificare text
+
+    rating_value = document.getElementById("rating-value");
+    rating_value.textContent = "You rated the movie: "+ n + "/5★";
+
+    // schimbare numar stele umplute
+
+    for (let i = 1; i <= n; i++) {
+
+        let crt_star = document.getElementById("star" + i);
+        crt_star.style.fill = "#ffe81f";
+    }
+
+    for (let i = n+1; i <= 5; i++) {
+        let crt_star = document.getElementById("star" + i);
+        crt_star.style.fill = "#000000";
+    }
+
+   
+}
 
 window.onload = function() {
-    const search = document.getElementById("search");
-    search.addEventListener('keypress', KeypressListenerSearch);
+    // Search
 
+    const search = document.getElementById("search");
+    search.addEventListener('keypress', keypressListenerSearch);
+
+    // Delete sidebar & notes
     const delete_sidebar = document.getElementById("close-x-sidebar");
-    delete_sidebar.addEventListener('click', DeleteSidebar);
+    delete_sidebar.addEventListener('click', deleteSidebar);
+
 
     const delete_notes = document.getElementById("close-x-notes");
-    delete_notes.addEventListener('click', DeleteNotes);
+    delete_notes.addEventListener('click', deleteNotes);
+
+
+    // Change main color
+
+    let mainPageColor = document.getElementById('main-style-color');
+    if (!localStorage.getItem("main-style-color")) {
+        populateStorage();
+    } else {
+        setStyle();
+    } 
+    mainPageColor.onchange = populateStorage;
+   
+    const random_color = document.getElementById("random-color-button");
+    random_color.addEventListener("click", changeToRandomColor);
+
+    const default_color = document.getElementById("default-color-button");
+    default_color.addEventListener("click", changeToDefaultColor);
 
 
 }
+
+
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    // memorare text din Notes
+
+    const notes_text = document.getElementById("notes");
+    const saved_text = localStorage.getItem("notes-text");
+
+    if (saved_text) {
+        notes_text.value = saved_text;
+    }
+
+    notes_text.addEventListener("input", function() {localStorage.setItem("notes-text", notes_text.value);});
+
+    // Star ratings
+    const star1 =  document.getElementById("star1");
+    star1.addEventListener("click", () => rating_change(1));
+
+    const star2 =  document.getElementById("star2");
+    star2.addEventListener("click", () => rating_change(2));
+
+    const star3 =  document.getElementById("star3");
+    star3.addEventListener("click", () => rating_change(3));
+
+    const star4 =  document.getElementById("star4");
+    star4.addEventListener("click", () => rating_change(4));
+
+    const star5 =  document.getElementById("star5");
+    star5.addEventListener("click", () => rating_change(5));
+ 
+    rating_change(localStorage.getItem("rating"));
+
+  });
 
