@@ -226,7 +226,7 @@ function addOpenNotesButton() {
     header.textContent = "OPEN NOTES";
 
     const open_icon =  document.createElement("img");
-    open_icon.src = "resources/open.svg";
+    open_icon.src = "resources/icons/open.svg";
     open_icon.alt="Open icon";
     open_icon.id = "open-notes";
 
