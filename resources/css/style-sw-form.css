@@ -422,7 +422,7 @@ input[type=submit] {
     margin-left: 0.75rem;
 }
 
-@media all and  (max-width: 80em) {
+@media all and  (max-width: 70em) {
     textarea {
         width: 100%; 
     }

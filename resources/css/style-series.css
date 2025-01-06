@@ -526,22 +526,23 @@ p > a, #sidebar a{
 
 
 #close-x-sidebar,  #close-x-notes {
-    width: 15%;
+    width: 12%;
     margin-left: 0.2em;
     height: auto;
     cursor: pointer;
     background-color: #ffe81f; 
 }
 
-@media all and (max-width: 70em) {
+@media all and (max-width: 25em) {
     #close-x-sidebar,  #close-x-notes {
-        width: 8%;
+        width: 10%;
     }
 }
 
-@media all and (max-width: 25em) {
+
+@media all and (max-width: 80em) {
     #close-x-sidebar,  #close-x-notes {
-        width: 12%;
+        width: 8%;
     }
 }
 

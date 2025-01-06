@@ -718,11 +718,17 @@ tr:nth-child(even):hover {
 
 
 #close-x-sidebar,  #close-x-notes {
-    width: 15%;
+    width: 12%;
     margin-left: 0.2em;
     height: auto;
     cursor: pointer;
     background-color: #ffe81f; 
+}
+
+@media all and (max-width: 25em) {
+    #close-x-sidebar,  #close-x-notes {
+        width: 10%;
+    }
 }
 
 @media all and (max-width: 80em) {
@@ -731,11 +737,7 @@ tr:nth-child(even):hover {
     }
 }
 
-@media all and (max-width: 25em) {
-    #close-x-sidebar,  #close-x-notes {
-        width: 12%;
-    }
-}
+
 
 #notes-container {
     display: grid;
