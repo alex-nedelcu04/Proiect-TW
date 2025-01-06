@@ -445,6 +445,7 @@ nav {
     position: relative;
 }
 
+
 @media all and  (min-width:10em) {
     .dropdown-menu ul ul ul {
         top: -200%;
@@ -512,7 +513,7 @@ html {
 }
 
 .back-to-top:hover {
-    background: url(pictures/hyperspace.png)
+    background: url(../pictures/hyperspace.png)
 }
 
 .back-to-top:hover img {
@@ -529,7 +530,7 @@ p > a, #sidebar a{
 
 
 .actor-name {
-    color: #2E67F8;
+    color: #ffe81f;
     font-weight: bold;
     text-shadow:  2px 2px #000000;
 }
@@ -700,6 +701,7 @@ tr:nth-child(even):hover {
 .close-container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .close {
@@ -723,7 +725,7 @@ tr:nth-child(even):hover {
     background-color: #ffe81f; 
 }
 
-@media all and (max-width: 70em) {
+@media all and (max-width: 80em) {
     #close-x-sidebar,  #close-x-notes {
         width: 8%;
     }

@@ -193,6 +193,70 @@ function changeToDefaultColor() {
 }
 
 
+// Change main color for navbar
+
+function changeNavbarSectionColor() {
+    
+
+    const sections = document.querySelectorAll(".dropdown-menu ul li a");
+
+    sections.forEach((section) => {
+    
+        section.parentElement.addEventListener("mouseover", () => {
+            section.style.background = localStorage.getItem("main-style-color");
+            section.style.color = "black";
+        });
+        section.parentElement.addEventListener("mouseout", () => {
+            section.style.background = ""; 
+            section.style.color = "";
+        });
+    });
+    
+   changeNavbarSubsectionColor();
+}
+
+function changeNavbarSubsectionColor() {
+    
+
+    const subsections = document.querySelectorAll(".dropdown-menu ul ul li a");
+
+    subsections.forEach((subsection) => {
+
+        subsection.style.background = localStorage.getItem("main-style-color"); 
+        subsection.style.color = "black";
+    
+        subsection.parentElement.addEventListener("mouseover", () => {
+            subsection.style.background = "#262626";
+            subsection.style.color = "white";
+
+        });
+        subsection.parentElement.addEventListener("mouseout", () => {
+            subsection.style.background = localStorage.getItem("main-style-color"); 
+            subsection.style.color = "black";
+        });
+    });
+}
+
+// Change main color for hovering actor names
+
+function changeCastHoverColor() {
+
+    const actors = document.querySelectorAll(".actor-name");
+
+    actors.forEach((actor) => {
+    
+        actor.parentElement.addEventListener("mouseover", () => {
+            actor.style.color = "#2E67F8";
+
+        });
+
+        actor.parentElement.addEventListener("mouseout", () => {
+            actor.style.color = localStorage.getItem("main-style-color");
+        });
+    });
+}
+
+
 // Delete sidebar
 
 function deleteSidebar() {
@@ -379,7 +443,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     default_color.addEventListener("click", changeToDefaultColor);
 
     changeColor(hex2rgb("#ffe81f"), hex2rgb(localStorage.getItem("main-style-color")));
-     
+    changeNavbarSectionColor();
+    changeCastHoverColor();
+
     // memorare text din Notes
 
     const notes_text = document.getElementById("notes");
@@ -390,7 +456,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     notes_text.addEventListener("input", function() {localStorage.setItem("notes-text", notes_text.value);});
-
 
   });
 

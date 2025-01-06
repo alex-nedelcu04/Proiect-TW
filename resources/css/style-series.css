@@ -6,7 +6,7 @@ body {
 }
 
 @media all and (max-width:80em) {
-    .grid-container {
+    #grid-container {
         display: grid;
         height: 100vh;
         grid-template-columns: 1fr;
@@ -22,7 +22,7 @@ body {
 }
 
 @media all and (min-width:80em) {
-    .grid-container {
+    #grid-container {
         display: grid;
         height: 100vh;
         grid-template-columns: 3.25fr 0.75fr;
@@ -37,7 +37,7 @@ body {
 
 }
 
-.grid-container {
+#grid-container {
     animation: transition-load-page 1s;
 }
 
@@ -74,7 +74,7 @@ footer {
     padding: 1%;
 }
 
-.sidebar {
+#sidebar {
     border-radius: 25px;
     background-color: #000000;
     border: #ffe81f solid 0.15em;
@@ -161,7 +161,7 @@ h1 {
     font-size: 2.5em;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
     color:#ffe81f;
     text-shadow:  2px 2px #000000;
 }
@@ -429,7 +429,7 @@ html {
 }
 
 .back-to-top:hover {
-    background: url(pictures/hyperspace.png)
+    background: url(../pictures/hyperspace.png)
 }
 
 .back-to-top:hover img {
@@ -438,14 +438,14 @@ html {
 
 /* sidebar */
 
-p > a, .sidebar a{
+p > a, #sidebar a{
     color:#ffe81f;
     font-style:italic;
 }
 
 
 .actor-name {
-    color: #2E67F8;
+    color: #ffe81f;
     font-weight: bold;
     text-shadow:  2px 2px #000000;
 }
@@ -454,7 +454,7 @@ p > a, .sidebar a{
     color: #ffe81f;
     font-weight: bold
 }
-.sidebar ul li {
+#sidebar ul li {
     margin-bottom: 5%;
     font-size: 1.25em;
 }
@@ -486,6 +486,7 @@ p > a, .sidebar a{
 
 }
 
+
 @media all and  (max-width: 70em) {
 
     #search {
@@ -502,6 +503,75 @@ p > a, .sidebar a{
 
     }
 
+}
+
+/* close buttons (sidebar & notes) */
+
+.close-container {
+    display: flex;
+    justify-content: center;
+}
+
+.close {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: #ffe81f solid 0.15em;
+    border-radius: 25px;
+    padding: 0.2em;
+    margin-top: 0.5em;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+
+#close-x-sidebar,  #close-x-notes {
+    width: 15%;
+    margin-left: 0.2em;
+    height: auto;
+    cursor: pointer;
+    background-color: #ffe81f; 
+}
+
+@media all and (max-width: 70em) {
+    #close-x-sidebar,  #close-x-notes {
+        width: 8%;
+    }
+}
+
+@media all and (max-width: 25em) {
+    #close-x-sidebar,  #close-x-notes {
+        width: 12%;
+    }
+}
+
+#notes-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: #ffe81f solid 0.15em;
+    border-radius: 25px;
+    padding: 0.6em;
+    margin-top: 0.5em;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+textarea {
+    background-color: #262626;
+    color:white;
+}
+
+
+@media all and (max-width: 70em) {
+    #close-x-sidebar,  #close-x-notes {
+        width: 6%;
+    }
+}
+
+@media all and (max-width: 25em) {
+    #close-x-sidebar,  #close-x-notes {
+        width: 10%;
+    }
 }
 
 /* change color */

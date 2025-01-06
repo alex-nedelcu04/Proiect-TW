@@ -29,7 +29,7 @@
             <input type="button" id="default-color-button" value="Default">
         </div>
 
-        <div class="grid-container">
+        <div id="grid-container">
             <!--navigation menu-->
             <nav class="dropdown-menu">
                 <ul class = "menu">
@@ -444,7 +444,26 @@
                     </section>
             </main>
               <!--sidebar-->
-              <div class="sidebar">
+              <div id="sidebar">
+
+                <div class="close-container">
+                    <div class="close">
+                        <h3>CLOSE SIDEBAR</h3>
+                        <img src="resources/icons/close-x.svg" alt="Close X icon" id="close-x-sidebar">
+                    </div>
+                </div>
+
+                <div id="notes-container">
+                    <h3>NOTES</h3>
+                    <textarea type="text" id="notes" name="notes" rows="8" cols="20"></textarea>
+                    <div class="close-container">
+                        <div class="close">
+                            <h5>CLOSE NOTES</h5>
+                            <img src="resources/icons/close-x.svg" alt="Close X icon" id="close-x-notes">
+                        </div>
+                    </div>
+                </div>
+                
                 <section id="clone-wars-cast">
                     <h2> <a href="series.html#clone-wars">The Clone Wars</a> Cast: </h2>
                     <ul>

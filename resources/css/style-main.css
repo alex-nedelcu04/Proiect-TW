@@ -63,6 +63,10 @@ header {
     
 }
 
+p > a {
+    color:#ffe81f;
+    font-style:italic;
+}
 
 #sw-logo {
     width: 10%;
@@ -339,7 +343,7 @@ html {
      
 }
 .back-to-top:hover {
-    background: url(pictures/hyperspace.png)
+    background: url(../pictures/hyperspace.png)
 }
 
 .back-to-top:hover img {
