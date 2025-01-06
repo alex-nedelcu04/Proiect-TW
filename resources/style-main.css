@@ -158,14 +158,14 @@ h1 {
 
 .introduction-title:hover {
     border-width: 0.35em;
-    background-color: #ffe81f;
+    background-color: #c8b61a;
     border-color: #c8b61a;
     font-size: 1.25em;
     animation: cycle-colors 5s linear infinite;
     box-shadow:
-        0 0 0.5em #ffe81f,
-        0 0 1.5em #ffe81f,
-        0 0 1.5em #ffe81f;
+        0 0 0.5em #c8b61a,
+        0 0 1.5em #c8b61a,
+        0 0 1.5em #c8b61a;
 }
 
 .introduction-title:hover > #intro-h1 {
@@ -562,6 +562,8 @@ label:not(.hilt) {
     }
 }
 
+/* search */
+
 @media all and  (min-width: 70em) {
 
     #search {
@@ -596,6 +598,8 @@ label:not(.hilt) {
 
 }
 
+/* change color */
+
 #change-color {
     display: block;
     margin-bottom: 0.65rem;
@@ -615,4 +619,45 @@ label:not(.hilt) {
 #random-color-button, #default-color-button{
     background-color: #424242;
     color:#ffe81f;
+}
+
+
+/* rating */
+
+.review-container {
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 1fr;
+    border: #ffe81f solid 0.15em;
+    border-radius: 25px;
+    max-width: 23rem;  
+}
+
+.review-container p {
+    grid-column: 1 / span 5;
+    margin-left: 0.625rem;
+    color: #ffe81f;
+}
+
+.star {
+    fill: #000000;
+    stroke: #ffe81f;
+    stroke-width: 0.15em;
+    overflow: visible;
+    transform: scale(0.5);
+    max-height: 3.75rem;
+    max-width: 3.75rem;
+    margin-bottom: 1rem;
+}
+
+
+@media all and  (max-width: 30em) {
+    .star {
+        transform: scale(0.3);
+    }
+
+    .review-container p {
+        font-size: 70%;
+    }
 }

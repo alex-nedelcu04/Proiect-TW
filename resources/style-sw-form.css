@@ -158,14 +158,23 @@ h1 {
 
 .introduction-title:hover {
     border-width: 0.35em;
-    background-color: #ffe81f;
+    background-color: #c8b61a;
     border-color: #c8b61a;
     font-size: 1.25em;
     animation: cycle-colors 5s linear infinite;
     box-shadow:
-        0 0 0.5em #ffe81f,
-        0 0 1.5em #ffe81f,
-        0 0 1.5em #ffe81f;
+        0 0 0.5em #c8b61a,
+        0 0 1.5em #c8b61a,
+        0 0 1.5em #c8b61a;
+}
+
+@keyframes cycle-colors {
+    0% { filter: hue-rotate(0deg);}
+    20% { filter: hue-rotate(60deg); }
+    40% { filter: hue-rotate(120deg); }
+    60% { filter: hue-rotate(180deg); }
+    80% { filter: hue-rotate(240deg); }
+    100% { filter: hue-rotate(360deg); }
 }
 
 .introduction-title:hover > #intro-h1 {
@@ -346,36 +355,9 @@ html {
     transform: translateY(-4px);
 }
 
-.section-divide {
-    border: 0.25em solid #424242;
-}
-
-.subsection-divide {
-    border: 0.25em dashed #424242;
-}
 
 
-
-@media all and  (max-width: 35em) {
-
-    #release-order-pic:hover {
-        transform: scale(1.5) translate(20%, 20%);
-    }
-
-    #chrono-order-pic:hover {
-        transform: scale(1.8) translate(10%, 10%);
-    }
-}
-
-@media all and  (max-width: 80em) {
-    #release-order-pic {
-        width: 70%;
-    }
-
-    #chrono-order-pic {
-        width: 99%;
-    }
-}
+/* search */
 
 @media all and  (min-width: 70em) {
 
@@ -392,6 +374,7 @@ html {
     }
 
 }
+
 
 @media all and  (max-width: 70em) {
 
@@ -410,6 +393,8 @@ html {
     }
 
 }
+
+/* form */
 
 fieldset {
     border-color: #ffe81f;
@@ -442,6 +427,8 @@ input[type=submit] {
         width: 100%; 
     }
 }
+
+/* change color */
 
 #change-color {
     display: block;

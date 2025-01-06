@@ -311,15 +311,16 @@ nav {
 
 .introduction-title:hover {
     border-width: 0.35em;
-    background-color: #ffe81f;
+    background-color: #c8b61a;
     border-color: #c8b61a;
     font-size: 1.25em;
     animation: cycle-colors 5s linear infinite;
     box-shadow:
-        0 0 0.5em #ffe81f,
-        0 0 1.5em #ffe81f,
-        0 0 1.5em #ffe81f;
+        0 0 0.5em #c8b61a,
+        0 0 1.5em #c8b61a,
+        0 0 1.5em #c8b61a;
 }
+
 
 .introduction-title:hover > #intro-h1 {
     color: #000000;
@@ -422,6 +423,8 @@ p > a {
     border: 0.25em dashed #424242;
 }
 
+/* Search */
+
 @media all and  (min-width: 70em) {
 
     #search {
@@ -455,6 +458,8 @@ p > a {
     }
 
 }
+
+/* Change color */
 
 #change-color {
     display: block;

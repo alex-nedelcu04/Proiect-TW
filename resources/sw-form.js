@@ -120,12 +120,13 @@ function hex2rgb(hex) {
 }
 
 function setStyle() {
-    let new_color = localStorage.getItem("main-style-color");
+    let new_color = localStorage.getItem("main-style-color") || "#ffe81f";
     document.getElementById("main-style-color").value = new_color;
 
-    let old_color = localStorage.getItem("main-style-old-color");
+    let old_color = localStorage.getItem("main-style-old-color") ;
     
-
+    console.log(old_color);
+    console.log(new_color);
     changeColor(hex2rgb(old_color), hex2rgb(new_color));
 }
 
@@ -181,9 +182,24 @@ function changeToDefaultColor() {
     changeColor(hex2rgb(old_color), hex2rgb(new_color));
 }
 
+
+
 window.onload = function() {
+    // Search
+
     const search = document.getElementById("search");
     search.addEventListener('keypress', keypressListenerSearch);
+    
+    
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    // Change main color
+
+    if (!localStorage.getItem("main-style-color")) {
+        localStorage.setItem("main-style-color", "#ffe81f");
+        localStorage.setItem("main-style-old-color", "#ffe81f");
+    }
     
     let mainPageColor = document.getElementById('main-style-color');
     if (!localStorage.getItem("main-style-color")) {
@@ -198,5 +214,8 @@ window.onload = function() {
 
     const default_color = document.getElementById("default-color-button");
     default_color.addEventListener("click", changeToDefaultColor);
-    
-}
+
+    changeColor(hex2rgb("#ffe81f"), hex2rgb(localStorage.getItem("main-style-color")));
+
+ });
+

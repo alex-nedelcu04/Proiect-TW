@@ -99,6 +99,16 @@ function changeColor(old_color, new_color) {
         if (crt_border_color === old_color) {
             crt.style.borderColor = new_color;
         }
+
+        let crt_fill = computed_style.fill;
+        if (crt_fill === old_color) {
+            crt.style.fill = new_color;
+        }
+
+        let crt_stroke = computed_style.stroke;
+        if (crt_stroke === old_color) {
+            crt.style.stroke = new_color;
+        }
     });
 
 }
@@ -249,7 +259,8 @@ function addOpenNotesButton() {
     open_icon.style.height = "auto";
     open_icon.style.cursor = "pointer";
     open_icon.style.marginBottom = "0.5rem";
-
+    open_icon.style.backgroundColor = "#ffe81f";
+    open_icon.style.marginLeft = "0.2em";
     
     const reopen_notes = document.getElementById("open-notes");
 
@@ -269,7 +280,12 @@ function deleteNotes() {
     notes_container.innerHTML='';
     notes_container.remove();
 
-    setTimeout(addOpenNotesButton, 700);
+    setTimeout(function() {
+        addOpenNotesButton();
+        // reparare culoare principala
+        changeColor(hex2rgb("#ffe81f"), hex2rgb(localStorage.getItem("main-style-color")));
+    }, 700);
+
 }
 
 function reopenNotes() {
@@ -316,38 +332,11 @@ function reopenNotes() {
 
     } 
 
+    // reparare culoare principala
+    changeColor(hex2rgb("#ffe81f"), hex2rgb(localStorage.getItem("main-style-color")));
+
 }
-// Star Ratings
 
-if (!localStorage.getItem("rating"))
-    localStorage.setItem("rating", 0);
-
-function rating_change(n) {
-
-    let rating = Number(localStorage.getItem("rating"));
-    localStorage.setItem("rating", n);
-    console.log(localStorage.getItem("rating"));
-    
-    // modificare text
-
-    rating_value = document.getElementById("rating-value");
-    rating_value.textContent = "You rated the movie: "+ n + "/5★";
-
-    // schimbare numar stele umplute
-
-    for (let i = 1; i <= n; i++) {
-
-        let crt_star = document.getElementById("star" + i);
-        crt_star.style.fill = "#ffe81f";
-    }
-
-    for (let i = n+1; i <= 5; i++) {
-        let crt_star = document.getElementById("star" + i);
-        crt_star.style.fill = "#000000";
-    }
-
-   
-}
 
 window.onload = function() {
     // Search
@@ -364,8 +353,17 @@ window.onload = function() {
     delete_notes.addEventListener('click', deleteNotes);
 
 
-    // Change main color
+}
 
+
+document.addEventListener("DOMContentLoaded", (event) => {
+     // Change main color
+
+    if (!localStorage.getItem("main-style-color")) {
+        localStorage.setItem("main-style-color", "#ffe81f");
+        localStorage.setItem("main-style-old-color", "#ffe81f");
+    }
+    
     let mainPageColor = document.getElementById('main-style-color');
     if (!localStorage.getItem("main-style-color")) {
         populateStorage();
@@ -380,12 +378,8 @@ window.onload = function() {
     const default_color = document.getElementById("default-color-button");
     default_color.addEventListener("click", changeToDefaultColor);
 
-
-}
-
-
-
-document.addEventListener("DOMContentLoaded", (event) => {
+    changeColor(hex2rgb("#ffe81f"), hex2rgb(localStorage.getItem("main-style-color")));
+     
     // memorare text din Notes
 
     const notes_text = document.getElementById("notes");
@@ -397,23 +391,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     notes_text.addEventListener("input", function() {localStorage.setItem("notes-text", notes_text.value);});
 
-    // Star ratings
-    const star1 =  document.getElementById("star1");
-    star1.addEventListener("click", () => rating_change(1));
-
-    const star2 =  document.getElementById("star2");
-    star2.addEventListener("click", () => rating_change(2));
-
-    const star3 =  document.getElementById("star3");
-    star3.addEventListener("click", () => rating_change(3));
-
-    const star4 =  document.getElementById("star4");
-    star4.addEventListener("click", () => rating_change(4));
-
-    const star5 =  document.getElementById("star5");
-    star5.addEventListener("click", () => rating_change(5));
- 
-    rating_change(localStorage.getItem("rating"));
 
   });
 
