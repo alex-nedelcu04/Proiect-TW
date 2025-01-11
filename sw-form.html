@@ -125,7 +125,7 @@
                 
                 <!--formular-->
                 <div id="form-container" target="_self" method="post" action="Earth"> 
-                    <form>
+                    <form id="sw-form">
                         <fieldset>
                             <legend>Personal information</legend>
                             <div>
@@ -190,7 +190,7 @@
                                     <option value="Luke">Luke Skywalker</option>
                                     <option value="MaceWindu">Mace Windu</option>
                                     <option value="ObiWan">Obi-Wan Kenobi</option>
-                                    <option value="Padme">PadmÃ© Amidala</option>
+                                    <option value="Padme">Padmé Amidala</option>
                                     <option value="Palpatine">Palpatine (Emperor)</option>
                                     <option value="Poe">Poe Dameron</option>
                                     <option value="QuiGon">Qui-Gon Jinn</option>
@@ -210,18 +210,18 @@
 
                             <div>
                                 <label for="fav-movie">2. What is your favorite Star Wars movie?</label>
-                                <select id="fav-movie", name="fav-movie" required>
+                                <select id="fav-movie", name="fav-movie" >
                                     <option value="">---Please enter an option---</option>
-                                    <option value="TPM">The Phantom Menace</option>
-                                    <option value="AOTC">Attack of the Clones</option>
-                                    <option value="ROTS">Revenge of the Sith</option>
-                                    <option value="ANH">A New Hope</option>
-                                    <option value="ESB">The Empire Strikes Back</option>
-                                    <option value="ROTJ">Return of the Jedi</option>
-                                    <option value="TFA">The Force Awakens</option>
-                                    <option value="TLJ">The Last Jedi</option>
-                                    <option value="TROS">The Rise of Skywalker</option>
-                                    <option value="RogueOne">Rogue One</option>
+                                    <option value="The Phantom Menace">The Phantom Menace</option>
+                                    <option value="Attack of the Clones">Attack of the Clones</option>
+                                    <option value="Revenge of the Sith">Revenge of the Sith</option>
+                                    <option value="A New Hope">A New Hope</option>
+                                    <option value="The Empire Strikes Back">The Empire Strikes Back</option>
+                                    <option value="Return of the Jedi">Return of the Jedi</option>
+                                    <option value="The Force Awakens">The Force Awakens</option>
+                                    <option value="The Last Jedi">The Last Jedi</option>
+                                    <option value="The Rise of Skywalker">The Rise of Skywalker</option>
+                                    <option value="Rogue One">Rogue One</option>
                                     <option value="Solo">Solo</option>
                                     
                                 </select>
@@ -275,25 +275,25 @@
                             <div>
                                 <label for="force_choice">1. If you could choose, which Force-wielding group would you align with?</label>
                                 <br>
-                                <input type="checkbox" name="group_choice" id="Jedi" value="Jedi">
+                                <input type="radio" name="group_choice" id="Jedi" value="Jedi">
                                 <label for="force_choice">Jedi</label>
                                 <br>
-                                <input type="checkbox" name="group_choice" id="Sith" value="Sith" checked>
+                                <input type="radio" name="group_choice" id="Sith" value="Sith" checked>
                                 <label for="force_choice">Sith</label>
                                 <br>
-                                <input type="checkbox" name="group_choice" id="DarkJedi" value="DarkJedi">
+                                <input type="radio" name="group_choice" id="DarkJedi" value="DarkJedi">
                                 <label for="force_choice">Dark Jedi</label>
                                 <br>
-                                <input type="checkbox" name="group_choice" id="GreyJedi" value="GreyJedi">
+                                <input type="radio" name="group_choice" id="GreyJedi" value="GreyJedi">
                                 <label for="force_choice">Grey Jedi</label>
                                 <br>
-                                <input type="checkbox" name="group_choice" id="TheInquisitorius" value="TheInquisitorius">
+                                <input type="radio" name="group_choice" id="TheInquisitorius" value="TheInquisitorius">
                                 <label for="force_choice">The Inquisitorius</label>
                                 <br>
-                                <input type="checkbox" name="group_choice" id="WitchesOfDathomir" value="WitchesOfDathomir">
+                                <input type="radio" name="group_choice" id="WitchesOfDathomir" value="WitchesOfDathomir">
                                 <label for="force_choice">Witches of Dathomir</label>
                                 <br>
-                                <input type="checkbox" name="group_choice" id="None" value="None">
+                                <input type="radio" name="group_choice" id="None" value="None">
                                 <label for="force_choice">None</label>
                             </div>
 
@@ -405,35 +405,24 @@
                             </div>
 
                             <div>
-                                <label for="merch">3. If you could choose, which Force-wielding group would you align with?</label>
+                                <label for="fan-event">3. Have you ever attended a Star Wars fan event?</label>
                                 <br>
-                                <input type="checkbox" name="merch-choice" id="YesMerch" value="YesMerch">
-                                <label for="merch">Yes</label>
-                                <input type="checkbox" name="merch-choice" id="NoMerch" value="NoMerch">
-                                <label for="merch">No</label>
-                            
-                               
-                            </div>
-
-                            <div>
-                                <label for="fan-event">4. Have you ever attended a Star Wars fan event?</label>
-                                <br>
-                                <input type="checkbox" name="fan-event-choice" id="YesFanEvent" value="YesFanEvent">
+                                <input type="radio" name="fan-event-choice" id="YesFanEvent" value="YesFanEvent">
                                 <label for="fan-event">Yes</label>
-                                <input type="checkbox" name="fan-event-choice" id="NoFanEvent" value="NoFanEvent">
+                                <input type="radio" name="fan-event-choice" id="NoFanEvent" value="NoFanEvent">
                                 <label for="fan-event">No</label>
-                                <input type="checkbox" name="fan-event-choice" id="YesPlanningTo" value="NoPlanningTo">
+                                <input type="radio" name="fan-event-choice" id="YesPlanningTo" value="NoPlanningTo">
                                 <label for="fan-event">Planning To</label>
                             
                                
                             </div>
 
                             <div>
-                                <label for="fandom">5. Are you part of any Star Wars fandom groups or communities?</label>
+                                <label for="fandom">4. Are you part of any Star Wars fandom groups or communities?</label>
                                 <br>
-                                <input type="checkbox" name="fandom-choice" id="YesFandom" value="YesFandom">
+                                <input type="radio" name="fandom-choice" id="YesFandom" value="YesFandom">
                                 <label for="fandom">Yes</label>
-                                <input type="checkbox" name="fandom-choice" id="NoFandom" value="NoFandom">
+                                <input type="radio" name="fandom-choice" id="NoFandom" value="NoFandom">
                                 <label for="fandom">No</label>
                             
                                
@@ -453,8 +442,29 @@
                                 <br>
                                 <input type="file" id="fan-art" name="fan-art" accept="image/*" />
                             </div>
+
+                            <div>
+                                <label for="trivia">(Trivia) 3. What was the designation of the Clone Trooper 
+                                    battalion commanded by Commander Cody under General Obi-Wan Kenobi during 
+                                    the Clone Wars?</label> 
+                                <br>
+                            
+                                <input type="radio" name="trivia" id="wrong1" value="wrong1">
+                                <label for="wrong1">501st</label><br>
+                            
+                                <input type="radio" name="trivia" id="wrong2" value="wrong2">
+                                <label for="wrong2">101st</label><br>
+                            
+                                <input type="radio" name="trivia" id="right" value="right">
+                                <label for="right">212th</label><br>
+                            
+                                <input type="radio" name="trivia" id="wrong3" value="wrong3">
+                                <label for="wrong3">66th</label><br>   
+                            </div> 
+                            
                         </fieldset>
-                        <input type="submit" value="Submit">
+                        <button id="submit" value="Send Request">Submit</button>
+                        <button type="reset" value="Reset the form">Reset</button>
                     </form>
                 </div>
             </main>

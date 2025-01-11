@@ -262,7 +262,10 @@ function deleteSidebar() {
     var sidebar = document.getElementById("sidebar");
     localStorage.setItem("sidebar-saved", sidebar.innerHTML);
     localStorage.setItem("style-sidebar-saved", sidebar.getAttribute("style"));
-    sidebar.innerHTML='';
+    
+    while (sidebar.firstChild) {
+        sidebar.removeChild(sidebar.firstChild);
+    }
     sidebar.remove();
 
     // schimbare grid
@@ -340,7 +343,10 @@ function deleteNotes() {
 
     var notes_container = document.getElementById("notes-container");
     localStorage.setItem("notes-saved", notes_container.innerHTML);
-    notes_container.innerHTML='';
+
+    while (notes_container.firstChild) {
+        notes_container.removeChild(notes_container.firstChild);
+    }
     notes_container.remove();
 
     setTimeout(function() {
@@ -373,7 +379,10 @@ function reopenNotes() {
         // Stergere Open Notes
 
         const open_container = document.getElementById('open-container');
-        open_container.innerHTML = '';
+
+        while (open_container.firstChild) {
+            open_container.removeChild(open_container.firstChild);
+        }
         open_container.remove();
 
         // readaugare event listener

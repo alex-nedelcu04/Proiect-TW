@@ -535,14 +535,14 @@ p > a, #sidebar a{
 
 @media all and (max-width: 25em) {
     #close-x-sidebar,  #close-x-notes {
-        width: 10%;
+        width: 8%;
     }
 }
 
 
 @media all and (max-width: 80em) {
     #close-x-sidebar,  #close-x-notes {
-        width: 8%;
+        width: 6%;
     }
 }
 

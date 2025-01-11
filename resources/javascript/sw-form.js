@@ -65,7 +65,7 @@ function keypressListenerSearch(event) {
         if (mediaId[searched_value]) {
             window.location.href = mediaId[searched_value];
         } else {
-            alert("Movie, series or game with the name \"" + event.target.value + "\" doesn't exist!")
+            alert("Movie, series or game with the name \"" + event.target.value + "\" doesn't exist!");
         }
         
     }
@@ -227,12 +227,38 @@ function changeNavbarSubsectionColor() {
 }
 
 
+// Show personal info after submit
+
+
 window.onload = function() {
     // Search
 
     const search = document.getElementById("search");
     search.addEventListener('keypress', keypressListenerSearch);
     
+
+    // Submit form
+
+    const form = document.getElementById("sw-form");
+    form.addEventListener("submit", function(event) {
+        // event.preventDefault();
+        const full_name = document.getElementById("full-name").value;
+        const email =  document.getElementById("email").value;
+        const phone_number = document.getElementById("phone-num").value;
+        const fav_movie = document.getElementById("fav-movie").value;
+        let trivia_answer = document.querySelector('input[name="trivia"]:checked').value;
+
+        if (trivia_answer === "right") {
+            trivia_answer = "Correct";
+        } else {
+            trivia_answer = "Wrong";
+        }
+        alert(`Full name: ${full_name}\nEmail: ${email}\nPhone number: ${phone_number}\nFavorite movie: ${fav_movie}\nTrivia question answer: ${trivia_answer}\nThe form was succesfully submitted!`);
+
+        
+
+
+    });
     
 }
 
