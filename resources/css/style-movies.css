@@ -790,3 +790,11 @@ textarea {
     background-color: #424242;
     color:#ffe81f;
 }
+
+#permanently-close {
+    width: 70%;
+    height: 2rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    color: #ffe81f;
+}

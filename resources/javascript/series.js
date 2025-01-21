@@ -303,9 +303,12 @@ function addOpenNotesButton() {
 
     const sidebar = document.getElementById("sidebar");
 
-    const clone_wars_cast = document.getElementById("clone-wars-cast");
+    const permanent_close = document.getElementById("perm-delete-container");
 
-    sidebar.insertBefore(open_container, clone_wars_cast);
+     open_container.classList.add("open");
+
+
+    sidebar.insertBefore(open_container, permanent_close);
 
     // CSS 
     open_container.style.display = "flex";
@@ -349,11 +352,14 @@ function deleteNotes() {
     }
     notes_container.remove();
 
-    setTimeout(function() {
-        addOpenNotesButton();
-        // reparare culoare principala
-        changeColor(hex2rgb("#ffe81f"), hex2rgb(localStorage.getItem("main-style-color")));
-    }, 700);
+    if (document.getElementById(">check-perm").checked) {
+        event.stopPropagation(); 
+    } else {
+        setTimeout(function () {
+            addOpenNotesButton();
+            changeColor(hex2rgb("#ffe81f"), hex2rgb(localStorage.getItem("main-style-color")));
+        }, 700);
+    }
 
 }
 
@@ -372,9 +378,9 @@ function reopenNotes() {
 
         const sidebar = document.getElementById("sidebar");
 
-        const clone_wars_cast = document.getElementById("clone-wars-cast");
+        const permanent_close = document.getElementById("perm-delete-container");
 
-        sidebar.insertBefore(notes_container, clone_wars_cast);   
+        sidebar.insertBefore(notes_container, permanent_close);   
 
         // Stergere Open Notes
 

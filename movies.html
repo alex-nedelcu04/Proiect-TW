@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="resources/css/style-movies.css" type="text/css">
         <link rel="icon" href="resources/icons/r2d2.ico" type="image/x-icon">
-        <script type="text/javascript" src="resources/javascript/movies.js"></script>
+        <script src="resources/javascript/movies.js"></script>
     </head>
     <body>
         <header>
@@ -20,11 +20,12 @@
             <label for="logo-click">
                 <img src="resources/pictures/star-wars-logo.png" alt="Star Wars Logo" id="sw-logo">
             </label>
+            
         </header>
 
         <div id="change-color">
             <label for="main-style-color">Style Color:</label>
-            <input type="color" id="main-style-color" name="main-style-color" value="#ffe81f" />
+            <input type="color" id="main-style-color" name="main-style-color" value="#ffe81f">
             <input type="button" id="random-color-button" value="Random">
             <input type="button" id="default-color-button" value="Default">
         </div>
@@ -97,10 +98,10 @@
                     </li>
                     <li class="section-title"><a href="sw-form.html"> Galaxy's Choice </a></li>  
                 </ul>
-                <input type="text"  name="search" id="search" placeholder="Search..." />    
+                <input type="text"  name="search" id="search" placeholder="Search...">    
             </nav>
-            <main>
-
+            <main id="main-id">
+                
                 <!--prequel-trilogy-->
                 <section id="prequel-trilogy"> 
                     <div class="trilogy-container">
@@ -122,7 +123,7 @@
                     <section id="episode1">
                         <h2> Star Wars: Episode I - The Phantom Menace (1999) </h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/episode1.jpg" alt="Episode I poster" id = "episode1-poster">
+                            <img src="resources/pictures/movies/episode1.jpg" alt="Episode I poster" id = "episode1-poster" class="movie-poster">
                             <article class="description">
                                 <h3>Description</h3>
                                 <p> Star Wars: Episode I - The Phantom Menace is the first movie in The Prequel Trilogy, 
@@ -166,7 +167,7 @@
                     <section id="episode2">
                         <h2> Star Wars: Episode II - Attack of the Clones (2002) </h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/episode2.jpg" alt="Episode II poster" id = "episode2-poster">
+                            <img src="resources/pictures/movies/episode2.jpg" alt="Episode II poster" id = "episode2-poster" class="movie-poster">
 
                             <article class="description">
                                 <h3>Description</h3>
@@ -211,7 +212,7 @@
                     <section id="episode3">
                         <h2> Star Wars: Episode III - Revenge of the Sith (2005)</h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/episode3.jpg" alt="Episode III poster" id = "episode3-poster">
+                            <img src="resources/pictures/movies/episode3.jpg" alt="Episode III poster" id = "episode3-poster" class="movie-poster">
 
                             <article class="description">
                                 <h3>Description</h3>
@@ -304,7 +305,7 @@
                     <section id="episode4">
                         <h2> Star Wars: Episode IV - A New Hope (1977)</h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/episode4.jpg" alt="Episode IV poster" id = "episode4-poster">
+                            <img src="resources/pictures/movies/episode4.jpg" alt="Episode IV poster" id = "episode4-poster" class="movie-poster">
 
                             <article class="description">
                                 <h3>Description</h3>
@@ -340,7 +341,7 @@
                     <section id="episode5">
                         <h2> Star Wars: Episode V - The Empire Strikes Back (1980) </h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/episode5.jpg" alt="Episode V poster" id = "episode5-poster">
+                            <img src="resources/pictures/movies/episode5.jpg" alt="Episode V poster" id = "episode5-poster" class="movie-poster">
                             <article class="description">
                                 <h3>Description</h3>
                                 <p> 
@@ -378,7 +379,7 @@
                     <section id="episode6">
                         <h2> Star Wars: Episode VI - Return of the Jedi (1983)</h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/episode6.jpg" alt="Episode VI poster" id = "episode6-poster">
+                            <img src="resources/pictures/movies/episode6.jpg" alt="Episode VI poster" id = "episode6-poster" class="movie-poster">
                             <article class="description">
                                 <h3>Description</h3>
                                 <p> Star Wars: Episode VI - Return of the Jedi is the final movie of the Original Trilogy. It follows a now-experienced Jedi, Luke Skywalker, 
@@ -465,7 +466,7 @@
                     <section id="episode7">
                         <h2> Star Wars: Episode VII - The Force Awakens (2015)</h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/episode7.jpg" alt="Episode VII poster" id = "episode7-poster">
+                            <img src="resources/pictures/movies/episode7.jpg" alt="Episode VII poster" id = "episode7-poster" class="movie-poster">
 
                             <article class="description">
                                 <h3>Description</h3>
@@ -501,7 +502,7 @@
                     <section id="episode8">
                         <h2> Star Wars: Episode VIII - The Last Jedi (2017)</h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/episode8.jpg" alt="Episode VIII poster" id = "episode8-poster">
+                            <img src="resources/pictures/movies/episode8.jpg" alt="Episode VIII poster" id = "episode8-poster" class="movie-poster">
 
                             <article class="description">
                                 <h3>Description</h3>
@@ -544,7 +545,7 @@
                     <section id="episode9">
                         <h2> Star Wars: Episode IX - The Rise of Skywalker (2019)</h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/episode9.jpg" alt="Episode IX poster" id = "episode9-poster">
+                            <img src="resources/pictures/movies/episode9.jpg" alt="Episode IX poster" id = "episode9-poster" class="movie-poster">
 
                             <article class="description">
                                 <h3>Description</h3>
@@ -632,7 +633,7 @@
                     <section id="rogue-one">
                         <h2> Rogue One: A Star Wars Story </h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/rogue-one.jpg" alt="Rogue One poster" id = "rogue-one-poster">
+                            <img src="resources/pictures/movies/rogue-one.jpg" alt="Rogue One poster" id = "rogue-one-poster" class="movie-poster">
 
                             <article class="description">
                                 <h3>Description</h3>
@@ -667,7 +668,7 @@
                     <section id="solo">
                         <h2> Solo: A Star Wars Story </h2>
                         <div class ="wrap-img">
-                            <img src="resources/pictures/movies/solo.jpg" alt="Solo poster" id = "solo-poster">
+                            <img src="resources/pictures/movies/solo.jpg" alt="Solo poster" id = "solo-poster" class="movie-poster">
 
                             <article class="description">
                                 <h3>Description</h3>
@@ -845,6 +846,7 @@
 
             <!--sidebar-->
             <div id="sidebar">
+                
                 <div class="close-container">
                     <div class="close">
                         <h3>CLOSE SIDEBAR</h3>
@@ -854,13 +856,19 @@
 
                 <div id="notes-container">
                     <h3>NOTES</h3>
-                    <textarea type="text" id="notes" name="notes" rows="8" cols="20"></textarea>
+                    <textarea id="notes" name="notes" rows="8" cols="20"></textarea>
                     <div class="close-container">
                         <div class="close">
                             <h5>CLOSE NOTES</h5>
                             <img src="resources/icons/close-x.svg" alt="Close X icon" id="close-x-notes">
                         </div>
+                        <br>
                     </div>
+                </div>
+
+                <div id="perm-delete-container">
+                    <span id="permanently-close">Close notes permanently </span>
+                    <input type="checkbox" id=">check-perm">
                 </div>
 
                 <section id="prequel-cast">

@@ -361,6 +361,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
     localStorage.setItem("are-stars-loaded", 0);
     rating_change(localStorage.getItem("rating"));
 
-
  });
 

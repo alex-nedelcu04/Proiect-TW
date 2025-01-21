@@ -304,9 +304,11 @@ function addOpenNotesButton() {
 
     const sidebar = document.getElementById("sidebar");
 
-    const prequel_cast = document.getElementById("prequel-cast");
+    const permanent_close = document.getElementById("perm-delete-container");
 
-    sidebar.insertBefore(open_container, prequel_cast);
+    open_container.classList.add("open");
+
+    sidebar.insertBefore(open_container, permanent_close);
 
     // CSS 
     open_container.style.display = "flex";
@@ -340,7 +342,7 @@ function addOpenNotesButton() {
 
 
 
-function deleteNotes() {
+function deleteNotes(event) {
 
     var notes_container = document.getElementById("notes-container");
     localStorage.setItem("notes-saved", notes_container.innerHTML);
@@ -350,11 +352,15 @@ function deleteNotes() {
     }
     notes_container.remove();
 
-    setTimeout(function() {
-        addOpenNotesButton();
-        // reparare culoare principala
-        changeColor(hex2rgb("#ffe81f"), hex2rgb(localStorage.getItem("main-style-color")));
-    }, 700);
+
+    if (document.getElementById(">check-perm").checked) {
+        event.stopPropagation(); 
+    } else {
+        setTimeout(function () {
+            addOpenNotesButton();
+            changeColor(hex2rgb("#ffe81f"), hex2rgb(localStorage.getItem("main-style-color")));
+        }, 700);
+    }
 
 }
 
@@ -373,9 +379,9 @@ function reopenNotes() {
 
         const sidebar = document.getElementById("sidebar");
 
-        const prequel_cast = document.getElementById("prequel-cast");
+        const permanent_close = document.getElementById("perm-delete-container");
 
-        sidebar.insertBefore(notes_container, prequel_cast);   
+        sidebar.insertBefore(notes_container, permanent_close);   
 
         // Stergere Open Notes
 
@@ -465,6 +471,42 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     notes_text.addEventListener("input", function() {localStorage.setItem("notes-text", notes_text.value);});
+   
 
+    // JSON citate
+
+    const promiseFetch = fetch("http://localhost:8000/sw-quotes.json");
+
+    promiseFetch.then((response) => {
+        if (!response.ok) {
+            throw new Error(`Eroare: ${response.status}`);
+        }
+        return response.json(); // Use .json() to directly parse the JSON response
+    }).then(function (responseObject) {
+        // Assuming your JSON is structured as { "quotes": [...] }
+        console.log(responseObject);
+    
+        // Get the quotes array
+        const quotes = responseObject.quotes;
+    
+        // Get a random quote
+        const getRandomQuote = () => {
+            const random_quote = quotes[Math.floor(Math.random() * quotes.length)].quote;
+            const crt_quote = document.createElement('p');
+            crt_quote.innerText = random_quote;
+            return crt_quote;
+        };
+    
+        const sw_logo = document.getElementById("sw-logo");
+        const main = document.getElementById("main-id");
+        const prequel_trilogy = document.getElementById("prequel-trilogy");
+        sw_logo.onclick = function (event) {
+            const crt_quote = getRandomQuote();
+            main.insertBefore(crt_quote, prequel_trilogy);
+            stopPropagation(event);
+        };
+    }).catch(function (err) {
+        alert(err);
+    });
+    
   });
-

@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="resources/css/style-sw-form.css" type="text/css">
         <link rel="icon" href="resources/icons/r2d2.ico" type="image/x-icon">
-        <script type="text/javascript" src="resources/javascript/sw-form.js"></script>
+        <script src="resources/javascript/sw-form.js"></script>
     </head>
     <body>
 
@@ -25,7 +25,7 @@
 
         <div id="change-color">
             <label for="main-style-color">Style Color:</label>
-            <input type="color" id="main-style-color" name="main-style-color" value="#ffe81f" />
+            <input type="color" id="main-style-color" name="main-style-color" value="#ffe81f">
             <input type="button" id="random-color-button" value="Random">
             <input type="button" id="default-color-button" value="Default">
         </div>
@@ -98,7 +98,7 @@
                     </li>
                     <li><a href="sw-form.html"> Galaxy's Choice </a></li> 
                 </ul>   
-                <input type="text"  name="search" id="search" placeholder="Search..." />
+                <input type="text"  name="search" id="search" placeholder="Search...">
             </nav>
 
             <main>
@@ -130,35 +130,37 @@
                             <legend>Personal information</legend>
                             <div>
                                 <label for="full-name">Full name:</label>
-                                <input type="text" id="full-name" name="full-name" minlength="3" maxlength="30" required />
+                                <input type="text" id="full-name" name="full-name" minlength="3" maxlength="30" required >
                             </div>
 
                             <div>
                                 <label for="birthday">Date of birth:</label>
-                                <input type="date" id="birthday" name="birthday" min="1900-05-04" max="2030-05-04" value="2005-05-04" required />
+                                <input type="date" id="birthday" name="birthday" min="1900-05-04" max="2030-05-04" value="2005-05-04" required >
                             </div>
 
                             <div>
                                 <label for="country">Country:</label>
-                                <input type="text" id="country" name="country" required />
+                                <input type="text" id="country" name="country" required >
+
+                            </div>
 
                             <div>
                                 <label for="country">City:</label>
-                                <input type="text" id="city" name="city" required/>
+                                <input type="text" id="city" name="city" required>
                             </div> 
 
                             <div>
                                 <label for="address">Address (Street, ap., etc.):</label>
-                                <input type="text" id="address" name="address" required/>
+                                <input type="text" id="address" name="address" required>
                             </div> 
 
                             <div>
                                 <label for="email">Email address:</label>
-                                <input type="text" id="email" name="email" required pattern="([a-zA-Z0-9.\-_]+)@([a-z0-9]+)(.[a-zA-Z]{2,3})(.[a-zA-Z]{2,3})+"/>
+                                <input type="text" id="email" name="email" required pattern="([a-zA-Z0-9.\-_]+)@([a-z0-9]+)(.[a-zA-Z]{2,3})(.[a-zA-Z]{2,3})+">
                             </div> 
                             <div>
                                 <label for="phone-num">Phone number:</label>
-                                <input type="text" id="phone-num" name="phone-num" required pattern="[0-9]{10}"/>
+                                <input type="text" id="phone-num" name="phone-num" required pattern="[0-9]{10}">
                             </div>
                         </fieldset>
 
@@ -166,7 +168,7 @@
                             <legend>General questions</legend>
                             <div>
                                 <label for="fav-skywalker">1. Who is your favorite Star Wars character?</label>
-                                <select id="fav-skywalker", name="fav-skywalker" required>
+                                <select id="fav-skywalker" name="fav-skywalker" required>
                                     <option value="">---Please enter an option---</option>
                                     <option value="Ahsoka">Ahsoka Tano</option>
                                     <option value="Anakin">Anakin Skywalker</option>
@@ -205,12 +207,12 @@
 
                             <div>
                                 <label for="other-character">If you chose other, please enter the character's name here: </label>
-                                <input type="text" id="other-character" name="other-character" />
+                                <input type="text" id="other-character" name="other-character" >
                             </div> 
 
                             <div>
                                 <label for="fav-movie">2. What is your favorite Star Wars movie?</label>
-                                <select id="fav-movie", name="fav-movie" >
+                                <select id="fav-movie" name="fav-movie" >
                                     <option value="">---Please enter an option---</option>
                                     <option value="The Phantom Menace">The Phantom Menace</option>
                                     <option value="Attack of the Clones">Attack of the Clones</option>
@@ -229,7 +231,7 @@
 
                             <div>
                                 <label for="fav-series">3. What is your favorite Star Wars series?</label>
-                                <select id="fav-series", name="fav-series" required>
+                                <select id="fav-series" name="fav-series" required>
                                     <option value="">---Please enter an option---</option>
                                     
                                     <option value="TheCloneWars">The Clone Wars</option>
@@ -246,7 +248,7 @@
 
                             <div>
                                 <label for="fav-trilogy">4. What is your favorite trilogy?</label>
-                                <select id="fav-trilogy", name="fav-trilogy" required>
+                                <select id="fav-trilogy" name="fav-trilogy" required>
                                     <option value="">---Please enter an option---</option>
                                     
                                     <option value="ThePrequelTrilogy">The Prequel Trilogy</option>
@@ -258,7 +260,7 @@
 
                             <div>
                                 <label for="fav-era">5. What is your favorite Star Wars era?</label>
-                                <select id="fav-era", name="fav-era" required>
+                                <select id="fav-era" name="fav-era" required>
                                     <option value="">---Please enter an option---</option>
                                     
                                     <option value="TheHighRepublicEra">The High Republic Era</option>
@@ -273,33 +275,33 @@
                         <fieldset>
                             <legend>Hypotheticals and other preferences</legend>
                             <div>
-                                <label for="force_choice">1. If you could choose, which Force-wielding group would you align with?</label>
+                                <label for="Jedi">1. If you could choose, which Force-wielding group would you align with?</label>
                                 <br>
                                 <input type="radio" name="group_choice" id="Jedi" value="Jedi">
-                                <label for="force_choice">Jedi</label>
+                                <label for="Jedi">Jedi</label>
                                 <br>
                                 <input type="radio" name="group_choice" id="Sith" value="Sith" checked>
-                                <label for="force_choice">Sith</label>
+                                <label for="Sith">Sith</label>
                                 <br>
                                 <input type="radio" name="group_choice" id="DarkJedi" value="DarkJedi">
-                                <label for="force_choice">Dark Jedi</label>
+                                <label for="DarkJedi">Dark Jedi</label>
                                 <br>
                                 <input type="radio" name="group_choice" id="GreyJedi" value="GreyJedi">
-                                <label for="force_choice">Grey Jedi</label>
+                                <label for="GreyJedi">Grey Jedi</label>
                                 <br>
                                 <input type="radio" name="group_choice" id="TheInquisitorius" value="TheInquisitorius">
-                                <label for="force_choice">The Inquisitorius</label>
+                                <label for="TheInquisitorius">The Inquisitorius</label>
                                 <br>
                                 <input type="radio" name="group_choice" id="WitchesOfDathomir" value="WitchesOfDathomir">
-                                <label for="force_choice">Witches of Dathomir</label>
+                                <label for="WitchesOfDathomir">Witches of Dathomir</label>
                                 <br>
                                 <input type="radio" name="group_choice" id="None" value="None">
-                                <label for="force_choice">None</label>
+                                <label for="None">None</label>
                             </div>
-
+                            
                             <div>
                                 <label for="planet_choice">2. If you could live on any Star Wars planet, which one would it be?</label>
-                                <select id="planet_choice", name="planet_choice" required>
+                                <select id="planet_choice" name="planet_choice" required>
                                     <option value="">---Please enter an option---</option>
                                     <option value="Alderaan">Alderaan</option>
                                     <option value="Coruscant">Coruscant</option>
@@ -317,12 +319,12 @@
                             </div>
                             <div>
                                 <label for="other-planet">If you chose other, please enter the planet's name here: </label>
-                                <input type="text" id="other-planet" name="other-planet" />
+                                <input type="text" id="other-planet" name="other-planet" >
                             </div>
 
                             <div>
                                 <label for="color_choice">3. What color would your lightsaber be?</label>
-                                <select id="color_choice", name="color_choice" required>
+                                <select id="color_choice" name="color_choice" required>
                                     <option value="">---Please enter an option---</option>
                                     
                                     <option value="Blue">Blue</option>
@@ -337,12 +339,12 @@
                             </div>
                             <div>
                                 <label for="other-color">If you chose other, please enter the color here: </label>
-                                <input type="text" id="other-color" name="other-color" />
+                                <input type="text" id="other-color" name="other-color" >
                             </div>
 
                             <div>
-                                <label for="species_choice">4. What is you favorite  Star Wars species?</label>
-                                <select id="species_choice", name="species_choice" required>
+                                <label for="species_choice">4 What is you favorite  Star Wars species?</label>
+                                <select id="species_choice" name="species_choice" required>
                                     <option value="">---Please enter an option---</option>
                                     
                                     <option value="Mandalorians">Mandalorians</option>
@@ -357,20 +359,20 @@
                                 </select>
                             </div>
                             <div>
-                                <label for="other-color">If you chose other, please enter the species' name here: </label>
-                                <input type="text" id="other-color" name="other-color" />
+                                <label for="other-species">If you chose other, please enter the species' name here: </label>
+                                <input type="text" id="other-species" name="other-species" >
                             </div>
 
                             <div>
                                 <label for="ch-for-a-day">5. If you could be any Star Wars character for a day, who would it be and why?</label>
-                                <br/>
-                                <textarea type="text" id="ch-for-a-day" name="ch-for-a-day" rows="4" cols="80" required></textarea>
+                                <br>
+                                <textarea id="ch-for-a-day" name="ch-for-a-day" rows="4" cols="80" required></textarea>
                             </div>
 
                             <div>
                                 <label for="underrated">6. Who is the most underrated Star Wars character in your opinion? Explain you choice: </label>
-                                <br/>
-                                <textarea type="text" id="underrated" name="underrated" rows="4" cols="80" required></textarea>
+                                <br>
+                                <textarea  id="underrated" name="underrated" rows="4" cols="80" required></textarea>
                             </div>
                         </fieldset>
 
@@ -378,7 +380,7 @@
                             <legend>Past Star Wars Experience</legend>
                             <div>
                                 <label for="sw-introduction">1. How did you first get introduced to Star Wars?</label>
-                                <select id="sw-introduction", name="sw-introduction" required>
+                                <select id="sw-introduction" name="sw-introduction" required>
                                     <option value="">---Please enter an option---</option>
              
                                     <option value="Books">Books</option>
@@ -393,7 +395,7 @@
 
                             <div>
                                 <label for="most-consumed">2. What Star Wars content do you consume the most?</label>
-                                <select id="most-consumed", name="mosst-consumed" required>
+                                <select id="most-consumed" name="mosst-consumed" required>
                                     <option value="">---Please enter an option---</option>
              
                                     <option value="Books-most">Books</option>
@@ -405,46 +407,47 @@
                             </div>
 
                             <div>
-                                <label for="fan-event">3. Have you ever attended a Star Wars fan event?</label>
+                                <label>3. Have you ever attended a Star Wars fan event?</label>
                                 <br>
                                 <input type="radio" name="fan-event-choice" id="YesFanEvent" value="YesFanEvent">
-                                <label for="fan-event">Yes</label>
+                                <label for="YesFanEvent">Yes</label>
+                                <br>
                                 <input type="radio" name="fan-event-choice" id="NoFanEvent" value="NoFanEvent">
-                                <label for="fan-event">No</label>
-                                <input type="radio" name="fan-event-choice" id="YesPlanningTo" value="NoPlanningTo">
-                                <label for="fan-event">Planning To</label>
-                            
-                               
+                                <label for="NoFanEvent">No</label>
+                                <br>
+                                <input type="radio" name="fan-event-choice" id="PlanningTo" value="PlanningTo">
+                                <label for="PlanningTo">Planning To</label>
                             </div>
+                            
 
                             <div>
-                                <label for="fandom">4. Are you part of any Star Wars fandom groups or communities?</label>
+                                <label>4. Are you part of any Star Wars fandom groups or communities?</label>
                                 <br>
                                 <input type="radio" name="fandom-choice" id="YesFandom" value="YesFandom">
-                                <label for="fandom">Yes</label>
+                                <label for="YesFandom">Yes</label>
+                                <br>
                                 <input type="radio" name="fandom-choice" id="NoFandom" value="NoFandom">
-                                <label for="fandom">No</label>
-                            
-                               
+                                <label for="NoFandom">No</label>
                             </div>
+                            
                         </fieldset>
                         
                         <fieldset>
                             <legend>Extra points</legend>
                             <div>
                                 <label for="why-do-you-deserve">(Optional) 1. Tell us why you believe you deserve to win:</label>
-                                <br/>
-                                <textarea type="text" id="why-do-you-deserve" name="why-do-you-deserve" rows="8" cols="100" ></textarea>
+                                <br>
+                                <textarea id="why-do-you-deserve" name="why-do-you-deserve" rows="8" cols="100" ></textarea>
                             </div>
 
                             <div>
                                 <label for="fan-art">(Optional) 2. Your Star Wars-inspired fan art:</label>
                                 <br>
-                                <input type="file" id="fan-art" name="fan-art" accept="image/*" />
+                                <input type="file" id="fan-art" name="fan-art" accept="image/*" >
                             </div>
 
                             <div>
-                                <label for="trivia">(Trivia) 3. What was the designation of the Clone Trooper 
+                                <label>(Trivia) 3. What was the designation of the Clone Trooper 
                                     battalion commanded by Commander Cody under General Obi-Wan Kenobi during 
                                     the Clone Wars?</label> 
                                 <br>
