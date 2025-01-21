@@ -665,3 +665,21 @@ label:not(.hilt) {
         font-size: 70%;
     }
 }
+
+#login-container {
+    display: inline-block;
+    border: #ffe81f solid 0.15em;
+    border-radius: 25px;
+    padding: 0.5em;
+}
+
+
+button {
+    margin-top: 0.8em;
+    background: #262626;
+    color: #fff;
+}
+
+span {
+    color:#ffe81f
+}

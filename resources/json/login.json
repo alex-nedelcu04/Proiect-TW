@@ -1,0 +1,85 @@
+{
+    "users": [
+      {
+        "username": "DarthVader",
+        "password": "IAmYourFather77"
+      },
+      {
+        "username": "LukeSkywalker",
+        "password": "JediKnight123"
+      },
+      {
+        "username": "PrincessLeia",
+        "password": "HelpMeObi1"
+      },
+      {
+        "username": "HanSolo",
+        "password": "NeverTellMeTheOdds"
+      },
+      {
+        "username": "YodaMaster",
+        "password": "DoOrDoNot21"
+      },
+      {
+        "username": "ObiWanKenobi",
+        "password": "TheForceIsWithYou"
+      },
+      {
+        "username": "Chewbacca",
+        "password": "Raaaaaawgh!"
+      },
+      {
+        "username": "AnakinSkywalker",
+        "password": "DarkSideRises"
+      },
+      {
+        "username": "Palpatine",
+        "password": "UnlimitedPower99"
+      },
+      {
+        "username": "AdmiralAckbar",
+        "password": "ItsATrap88"
+      },
+      {
+        "username": "BobaFett",
+        "password": "NoDisintegrations"
+      },
+      {
+        "username": "ReySkywalker",
+        "password": "TheLastJedi2023"
+      },
+      {
+        "username": "KyloRen",
+        "password": "MoreThanTheHelmet"
+      },
+      {
+        "username": "PoeDameron",
+        "password": "TheSpark77"
+      },
+      {
+        "username": "FinnTrooper",
+        "password": "FN2187Hero"
+      },
+      {
+        "username": "MaceWindu",
+        "password": "PurpleLightsaber"
+      },
+      {
+        "username": "QuiGonJinn",
+        "password": "LiveByTheForce"
+      },
+      {
+        "username": "LandoCalrissian",
+        "password": "BespinCloudCity"
+      },
+      {
+        "username": "R2D2",
+        "password": "BeepBoop42"
+      },
+      {
+        "username": "C3PO",
+        "password": "GoldenProtocol"
+      }
+    ]
+  }
+  

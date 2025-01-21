@@ -361,5 +361,76 @@ document.addEventListener("DOMContentLoaded", (event) => {
     localStorage.setItem("are-stars-loaded", 0);
     rating_change(localStorage.getItem("rating"));
 
- });
+    // JSON login
+
+
+    localStorage.setItem("logged_in", "false");
+    const promiseFetch = fetch("http://localhost:8000//resources/json/login.json");
+
+    promiseFetch
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(function (text) {
+            const responseObject = JSON.parse(text);
+            console.log(responseObject);
+
+            const username_input = document.getElementById("username");
+            const password_input = document.getElementById("password");
+            const login_button = document.getElementById("login-submit");
+
+            const users = responseObject.users;
+
+            login_button.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                if (localStorage.getItem("logged_in") === "true") {
+                    alert(`User ${localStorage.getItem("username_active")} is already logged in!`);
+                } else {
+                    const username_crt_value = username_input.value;
+                    const password_crt_value = password_input.value;
+
+                    console.log(username_crt_value, password_crt_value);
+
+                    let ok = false;
+                    users.forEach((user) => {
+                        if (user.username === username_crt_value && user.password === password_crt_value) {
+                            localStorage.setItem("logged_in", "true");
+                            localStorage.setItem("username_active", username_crt_value);
+                            alert(`Successful login! Welcome ${username_crt_value}!`);
+                            ok = true;
+                        }
+                    });
+
+                    if (!ok) {
+                        localStorage.setItem("logged_in", "false");
+                        alert(`Wrong username or password!`);
+                    }
+                }
+            });
+
+            const logout_button = document.getElementById("logout-submit");
+
+            logout_button.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                if (localStorage.getItem("logged_in") === "true") {
+                    alert(`User ${localStorage.getItem("username_active")} logged out!`);
+                    localStorage.setItem("logged_in", "false");
+                    username_input.value = "";
+                    password_input.value = "";
+                } else {
+                    alert(`There is no user logged in!`);
+                }
+            });
+        })
+        .catch(function (err) {
+            alert(err);
+        });
+
+
+    });
 

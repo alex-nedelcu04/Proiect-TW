@@ -475,21 +475,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // JSON citate
 
-    const promiseFetch = fetch("http://localhost:8000/sw-quotes.json");
+    const promiseFetch = fetch("http://localhost:8000/resources/json/sw-quotes.json");
 
     promiseFetch.then((response) => {
         if (!response.ok) {
             throw new Error(`Eroare: ${response.status}`);
         }
-        return response.json(); // Use .json() to directly parse the JSON response
-    }).then(function (responseObject) {
-        // Assuming your JSON is structured as { "quotes": [...] }
+        return response.text()
+
+    }).then(function (text) {
+        const responseObject=JSON.parse(text);
         console.log(responseObject);
     
-        // Get the quotes array
         const quotes = responseObject.quotes;
     
-        // Get a random quote
         const getRandomQuote = () => {
             const random_quote = quotes[Math.floor(Math.random() * quotes.length)].quote;
             const crt_quote = document.createElement('p');
@@ -500,10 +499,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const sw_logo = document.getElementById("sw-logo");
         const main = document.getElementById("main-id");
         const prequel_trilogy = document.getElementById("prequel-trilogy");
-        sw_logo.onclick = function (event) {
+        sw_logo.onclick = function () {
             const crt_quote = getRandomQuote();
             main.insertBefore(crt_quote, prequel_trilogy);
-            stopPropagation(event);
         };
     }).catch(function (err) {
         alert(err);
